@@ -7,12 +7,12 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
-use AppBundle\Entity\Employee;
+use AppBundle\Entity\Category;
 
-class EmployeeAdmin extends Admin
+class CategoryAdmin extends Admin
 {
-    protected $baseRouteName = 'AppBundle\Entity\Employee';
-    protected $baseRoutePattern = 'Employee';
+    protected $baseRouteName = 'AppBundle\Entity\Category';
+    protected $baseRoutePattern = 'Category';
     protected $datagridValues = [
         '_sort_order' => 'ASC',
         '_sort_by'    => 'name',
@@ -26,12 +26,9 @@ class EmployeeAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('firstName')
-            ->add('middleName')
-            ->add('lastName')
-            ->add('dob', 'date')
-            ->add('position')
-            ->add('roles')
+            ->add('title')
+            ->add('description')
+            ->add('employees');
         ;
     }
 
@@ -43,11 +40,8 @@ class EmployeeAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('firstName')
-            ->add('middleName')
-            ->add('lastName')
-            ->add('dob', 'sonata_type_date_picker')
-            ->add('position')
+            ->add('title')
+            ->add('description')
         ;
     }
 
@@ -59,12 +53,9 @@ class EmployeeAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('firstName')
-            ->add('middleName')
-            ->add('lastName')
-            ->add('dob', 'date')
-            ->add('position')
-            ->add('roles')
+            ->addIdentifier('title')
+            ->add('description')
+            ->add('employees');
         ;
     }
 
@@ -76,12 +67,9 @@ class EmployeeAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('firstName')
-            ->add('middleName')
-            ->add('lastName')
-            ->add('dob')
-            ->add('position')
-            ->add('roles')
+            ->add('title')
+            ->add('description')
+            ->add('employees');
         ;
     }
 }

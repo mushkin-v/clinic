@@ -88,14 +88,6 @@ doctrine:
                         class: Gedmo\SoftDeleteable\Filter\SoftDeleteableFilter
                         enabled: true
 
-#alice faker configuration
-hautelook_alice:
-    locale: en_US   # default
-    seed: 1         # default
-#    do_flush: true                              # default
-#    schema_tool: null                           # default
-#    doctrine: orm                               # default
-
 sensio_framework_extra:
     view:    { annotations: false }
     request:
@@ -120,20 +112,6 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
     disable_delivery: false
-
-nelmio_api_doc:
-    sandbox:
-        accept_type: application/json
-        body_format:
-            formats: [ json ]
-        request_format:
-            formats:
-                json: application/json
-            default_format: json
-
-sensio_framework_extra:
-    view:
-        annotations: false
 
 white_october_pagerfanta:
     exceptions_strategy:

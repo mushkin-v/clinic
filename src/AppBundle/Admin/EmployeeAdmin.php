@@ -31,7 +31,7 @@ class EmployeeAdmin extends Admin
             ->add('lastName')
             ->add('dob', 'date')
             ->add('position')
-            ->add('roles')
+            ->add('category')
         ;
     }
 
@@ -48,6 +48,7 @@ class EmployeeAdmin extends Admin
             ->add('lastName')
             ->add('dob', 'sonata_type_date_picker')
             ->add('position')
+            ->add('category',  'sonata_type_model', array('required' => false))
         ;
     }
 
@@ -64,7 +65,7 @@ class EmployeeAdmin extends Admin
             ->add('lastName')
             ->add('dob', 'date')
             ->add('position')
-            ->add('roles')
+            ->add('category')
         ;
     }
 
@@ -81,7 +82,7 @@ class EmployeeAdmin extends Admin
             ->add('lastName')
             ->add('dob')
             ->add('position')
-            ->add('roles')
+            ->add('category')
         ;
     }
 }

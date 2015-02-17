@@ -4,7 +4,7 @@ sonata_admin:
 
     dashboard:
         groups:
-            CheTheatre:
+            Clinic:
                 label: Main.Panel
                 label_catalogue: AppBundle
             sonata_media:
@@ -17,7 +17,7 @@ sonata_admin:
                 position: left
                 type: sonata.admin.block.admin_list
                 settings:
-                    groups: [CheTheatre]
+                    groups: [Clinic]
             -
                 position: right
                 type: sonata.admin.block.admin_list

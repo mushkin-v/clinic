@@ -7,19 +7,15 @@ use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 use AppBundle\Traits\TimestampableTrait;
 use Gedmo\Translatable\Translatable;
-use JMS\Serializer\Annotation\ExclusionPolicy;
-use JMS\Serializer\Annotation\Expose;
-use JMS\Serializer\Annotation\Type;
 
 /**
  * @ORM\Table(name="employees")
  * @ORM\Entity
  * @Gedmo\SoftDeleteable(fieldName="deletedAt", timeAware=false)
- * @ExclusionPolicy("all")
  */
 class Employee
 {
-    use TimestampableTrait;
+//    use TimestampableTrait;
 
     /**
      * @var integer
@@ -34,8 +30,6 @@ class Employee
      * @Gedmo\Translatable
      * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
-     * @Type("string")
-     * @Expose
      */
     private $firstName;
 
@@ -44,8 +38,6 @@ class Employee
      * @Gedmo\Translatable
      * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
-     * @Type("string")
-     * @Expose
      */
     private $lastName;
 
@@ -53,8 +45,6 @@ class Employee
      * @var string
      * @Gedmo\Translatable
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Type("string")
-     * @Expose
      */
     private $middleName;
 
@@ -62,8 +52,6 @@ class Employee
      * @var /Datetime
      * @Assert\NotBlank()
      * @ORM\Column(type="datetime")
-     * @Type("DateTime")
-     * @Expose
      */
     private $dob;
 
@@ -71,8 +59,6 @@ class Employee
      * @var string
      * @Gedmo\Translatable
      * @ORM\Column(type="string", length=255)
-     * @Type("string")
-     * @Expose
      */
     private $position;
 
@@ -84,32 +70,43 @@ class Employee
     private $locale;
 
     /**
-     * @var Role[]
-     *
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Role", mappedBy="employee", cascade={"persist"}, orphanRemoval=true)
+     * @var Category
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Category", inversedBy="employees")
      */
-    private $roles;
+    private $category;
 
     /**
      * @Gedmo\Slug(fields={"firstName", "lastName"})
      * @ORM\Column(name="slug", type="string", length=255)
-     * @Type("string")
-     * @Expose
      */
     private $slug;
 
     /**
-     * Constructor
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime", name="createdAt")
      */
-    public function __construct()
+    protected $createdAt;
+
+    /**
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime", nullable=true, name="updatedAt")
+     */
+    protected $updatedAt;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true, name="deletedAt")
+     */
+    protected $deletedAt;
+
+    public function __toString()
     {
-        $this->roles = new \Doctrine\Common\Collections\ArrayCollection();
+        return $this->getSlug();
     }
 
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -117,19 +114,9 @@ class Employee
     }
 
     /**
-     * Get firstName
-     *
-     * @return string
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
      * Set firstName
      *
-     * @param  string   $firstName
+     * @param string $firstName
      * @return Employee
      */
     public function setFirstName($firstName)
@@ -140,19 +127,19 @@ class Employee
     }
 
     /**
-     * Get lastName
+     * Get firstName
      *
-     * @return string
+     * @return string 
      */
-    public function getLastName()
+    public function getFirstName()
     {
-        return $this->lastName;
+        return $this->firstName;
     }
 
     /**
      * Set lastName
      *
-     * @param  string   $lastName
+     * @param string $lastName
      * @return Employee
      */
     public function setLastName($lastName)
@@ -163,19 +150,19 @@ class Employee
     }
 
     /**
-     * Get middleName
+     * Get lastName
      *
-     * @return string
+     * @return string 
      */
-    public function getMiddleName()
+    public function getLastName()
     {
-        return $this->middleName;
+        return $this->lastName;
     }
 
     /**
      * Set middleName
      *
-     * @param  string   $middleName
+     * @param string $middleName
      * @return Employee
      */
     public function setMiddleName($middleName)
@@ -186,19 +173,19 @@ class Employee
     }
 
     /**
-     * Get dob
+     * Get middleName
      *
-     * @return \DateTime
+     * @return string 
      */
-    public function getDob()
+    public function getMiddleName()
     {
-        return $this->dob;
+        return $this->middleName;
     }
 
     /**
      * Set dob
      *
-     * @param  \DateTime $dob
+     * @param \DateTime $dob
      * @return Employee
      */
     public function setDob($dob)
@@ -209,19 +196,19 @@ class Employee
     }
 
     /**
-     * Get position
+     * Get dob
      *
-     * @return string
+     * @return \DateTime 
      */
-    public function getPosition()
+    public function getDob()
     {
-        return $this->position;
+        return $this->dob;
     }
 
     /**
      * Set position
      *
-     * @param  string   $position
+     * @param string $position
      * @return Employee
      */
     public function setPosition($position)
@@ -231,25 +218,20 @@ class Employee
         return $this;
     }
 
-    public function setTranslatableLocale($locale)
-    {
-        $this->locale = $locale;
-    }
-
     /**
-     * Get slug
+     * Get position
      *
-     * @return string
+     * @return string 
      */
-    public function getSlug()
+    public function getPosition()
     {
-        return $this->slug;
+        return $this->position;
     }
 
     /**
      * Set slug
      *
-     * @param  string   $slug
+     * @param string $slug
      * @return Employee
      */
     public function setSlug($slug)
@@ -260,40 +242,104 @@ class Employee
     }
 
     /**
-     * Add role
+     * Get slug
      *
-     * @param  \AppBundle\Entity\Role $role
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
      * @return Employee
      */
-    public function addRole(\AppBundle\Entity\Role $role)
+    public function setCreatedAt($createdAt)
     {
-        $this->roles[] = $role;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
 
     /**
-     * Remove role
+     * Get createdAt
      *
-     * @param \AppBundle\Entity\Role $role
+     * @return \DateTime 
      */
-    public function removeRole(\AppBundle\Entity\Role $role)
+    public function getCreatedAt()
     {
-        $this->roles->removeElement($role);
+        return $this->createdAt;
     }
 
     /**
-     * Get roles
+     * Set updatedAt
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @param \DateTime $updatedAt
+     * @return Employee
      */
-    public function getRoles()
+    public function setUpdatedAt($updatedAt)
     {
-        return $this->roles;
+        $this->updatedAt = $updatedAt;
+
+        return $this;
     }
 
-    public function __toString()
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime 
+     */
+    public function getUpdatedAt()
     {
-        return $this->getSlug();
+        return $this->updatedAt;
+    }
+
+    /**
+     * Set deletedAt
+     *
+     * @param \DateTime $deletedAt
+     * @return Employee
+     */
+    public function setDeletedAt($deletedAt)
+    {
+        $this->deletedAt = $deletedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get deletedAt
+     *
+     * @return \DateTime 
+     */
+    public function getDeletedAt()
+    {
+        return $this->deletedAt;
+    }
+
+    /**
+     * Set category
+     *
+     * @param \AppBundle\Entity\Category $category
+     * @return Employee
+     */
+    public function setCategory(\AppBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \AppBundle\Entity\Category 
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }

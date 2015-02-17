@@ -2,7 +2,7 @@ services:
    sonata.admin.employee:
        class: AppBundle\Admin\EmployeeAdmin
        tags:
-           - { name: sonata.admin, manager_type: orm, group: "CheTheatre", label: "Employees" }
+           - { name: sonata.admin, manager_type: orm, group: "Clinic", label: "Employees" }
        arguments:
            - ~
            - AppBundle\Entity\Employee
@@ -10,35 +10,13 @@ services:
        calls:
            - [ setTranslationDomain, [AppBundle]]
 
-   sonata.admin.role:
-       class: AppBundle\Admin\RoleAdmin
+   sonata.admin.category:
+       class: AppBundle\Admin\CategoryAdmin
        tags:
-           - { name: sonata.admin, manager_type: orm, group: "Hidden", label: "Roles" }
+           - { name: sonata.admin, manager_type: orm, group: "Clinic", label: "Category" }
        arguments:
            - ~
-           - AppBundle\Entity\Role
-           - ~
-       calls:
-           - [ setTranslationDomain, [AppBundle]]
-
-   sonata.admin.performance:
-       class: AppBundle\Admin\PerformanceAdmin
-       tags:
-           - { name: sonata.admin, manager_type: orm, group: "CheTheatre", label: "Performances" }
-       arguments:
-           - ~
-           - AppBundle\Entity\Performance
-           - ~
-       calls:
-           - [ setTranslationDomain, [AppBundle]]
-
-   sonata.admin.performanceEvent:
-       class: AppBundle\Admin\PerformanceEventAdmin
-       tags:
-           - { name: sonata.admin, manager_type: orm, group: "CheTheatre", label: "PerformanceEvents" }
-       arguments:
-           - ~
-           - AppBundle\Entity\PerformanceEvent
+           - AppBundle\Entity\Category
            - ~
        calls:
            - [ setTranslationDomain, [AppBundle]]
