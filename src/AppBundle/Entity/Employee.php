@@ -98,30 +98,16 @@ class Employee
 
     /**
      * @var \Application\Sonata\MediaBundle\Entity\Media
-     * @ORM\ManyToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media", cascade={"persist"}, fetch="LAZY")
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Gallery")
+     * @ORM\JoinColumn(name="image", referencedColumnName="id")
      */
     protected $media;
-
-    /**
-     * @param MediaInterface $media
-     */
-    public function setMedia(MediaInterface $media)
-    {
-        $this->media = $media;
-    }
-
-    /**
-     * @return MediaInterface
-     */
-    public function getMedia()
-    {
-        return $this->media;
-    }
 
     public function __toString()
     {
         return $this->getSlug();
     }
+    
 
     /**
      * Get id
@@ -361,5 +347,28 @@ class Employee
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * Set media
+     *
+     * @param \Application\Sonata\MediaBundle\Entity\Gallery $media
+     * @return Employee
+     */
+    public function setMedia(\Application\Sonata\MediaBundle\Entity\Gallery $media = null)
+    {
+        $this->media = $media;
+
+        return $this;
+    }
+
+    /**
+     * Get media
+     *
+     * @return \Application\Sonata\MediaBundle\Entity\Gallery 
+     */
+    public function getMedia()
+    {
+        return $this->media;
     }
 }
