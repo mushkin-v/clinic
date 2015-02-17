@@ -2,10 +2,12 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: sonata.yml }
+    - { resource: admin.yml }
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -29,10 +31,15 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form:
+        resources:
+            - 'SonataCoreBundle:Form:datepicker.html.twig'
 
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
+    read_from:      %kernel.root_dir%/web/uploads/images
+    write_to:       %kernel.root_dir%/web/uploads/images
     use_controller: false
     bundles:        [ ]
     #java: /usr/bin/java
@@ -53,6 +60,8 @@ doctrine:
         user:     "%database_user%"
         password: "%database_password%"
         charset:  UTF8
+        types:
+            json: Sonata\Doctrine\Types\JsonType
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
@@ -62,7 +71,46 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
-        auto_mapping: true
+        entity_managers:
+            default:
+                auto_mapping: true
+                mappings:
+                  ApplicationSonataMediaBundle: ~
+                  SonataMediaBundle: ~
+                  gedmo_translatable:
+                    type: annotation
+                    prefix: Gedmo\Translatable\Entity
+                    dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+                    alias: GedmoTranslatable
+                    is_bundle: false
+                filters:
+                    softdeleteable:
+                        class: Gedmo\SoftDeleteable\Filter\SoftDeleteableFilter
+                        enabled: true
+
+#alice faker configuration
+hautelook_alice:
+    locale: en_US   # default
+    seed: 1         # default
+#    do_flush: true                              # default
+#    schema_tool: null                           # default
+#    doctrine: orm                               # default
+
+sensio_framework_extra:
+    view:    { annotations: false }
+    request:
+        converters: true
+        auto_convert: false
+
+stof_doctrine_extensions:
+    default_locale: en
+    translation_fallback: true
+    orm:
+        default:
+            timestampable: true
+            sluggable: true
+            softdeleteable: true
+            translatable: true
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -71,3 +119,23 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+    disable_delivery: false
+
+nelmio_api_doc:
+    sandbox:
+        accept_type: application/json
+        body_format:
+            formats: [ json ]
+        request_format:
+            formats:
+                json: application/json
+            default_format: json
+
+sensio_framework_extra:
+    view:
+        annotations: false
+
+white_october_pagerfanta:
+    exceptions_strategy:
+        out_of_range_page:        to_http_not_found
+        not_valid_current_page:   to_http_not_found
