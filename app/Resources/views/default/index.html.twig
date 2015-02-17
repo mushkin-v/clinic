@@ -1,5 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    Homepage.
+    <p>Test Media</p>
+    {% if media %}
+        {% thumbnail media, 'preview' %} {# render the related thumbnail #}
+        {% media media, 'preview' %} {# render the media #}
+        {% thumbnail media, 'small' %} {# render the related thumbnail #}
+        {% media media, 'small' %} {# render the media #}
+        {% thumbnail media, 'large' %} {# render the related thumbnail #}
+        {% media media, 'large' %} {# render the media #}
+
+    {% endif %}
+
 {% endblock %}

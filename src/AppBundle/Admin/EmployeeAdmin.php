@@ -32,6 +32,7 @@ class EmployeeAdmin extends Admin
             ->add('dob', 'date')
             ->add('position')
             ->add('category')
+            ->add('media')
         ;
     }
 
@@ -49,6 +50,10 @@ class EmployeeAdmin extends Admin
             ->add('dob', 'sonata_type_date_picker')
             ->add('position')
             ->add('category',  'sonata_type_model', array('required' => false))
+            ->add('media', 'sonata_media_type', array(
+                'provider' => 'sonata.media.provider.image',
+                'context'  => 'employee'
+            ));
         ;
     }
 
@@ -66,6 +71,7 @@ class EmployeeAdmin extends Admin
             ->add('dob', 'date')
             ->add('position')
             ->add('category')
+            ->add('media')
         ;
     }
 

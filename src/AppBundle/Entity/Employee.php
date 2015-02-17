@@ -4,8 +4,8 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Sonata\MediaBundle\Model\MediaInterface;
 use Symfony\Component\Validator\Constraints as Assert;
-use AppBundle\Traits\TimestampableTrait;
 use Gedmo\Translatable\Translatable;
 
 /**
@@ -15,8 +15,6 @@ use Gedmo\Translatable\Translatable;
  */
 class Employee
 {
-//    use TimestampableTrait;
-
     /**
      * @var integer
      * @ORM\Column(name="id", type="integer")
@@ -97,6 +95,28 @@ class Employee
      * @ORM\Column(type="datetime", nullable=true, name="deletedAt")
      */
     protected $deletedAt;
+
+    /**
+     * @var \Application\Sonata\MediaBundle\Entity\Media
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media", cascade={"persist"}, fetch="LAZY")
+     */
+    protected $media;
+
+    /**
+     * @param MediaInterface $media
+     */
+    public function setMedia(MediaInterface $media)
+    {
+        $this->media = $media;
+    }
+
+    /**
+     * @return MediaInterface
+     */
+    public function getMedia()
+    {
+        return $this->media;
+    }
 
     public function __toString()
     {
