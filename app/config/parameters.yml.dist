@@ -3,7 +3,7 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     127.0.0.1
     database_port:     ~
-    database_name:     symfony
+    database_name:     clinic
     database_user:     root
     database_password: ~
     # You should uncomment this if you want use pdo_sqlite
@@ -20,5 +20,5 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     admin_dashboard_base_url: /admin
-    sonata_admin.title: 'CheTheatre Project'
+    sonata_admin.title: 'Clinic Project'
     sonata_admin.logo_title: bundles/sonataadmin/logo_title.png
