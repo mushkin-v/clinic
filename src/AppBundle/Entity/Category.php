@@ -91,7 +91,7 @@ class Category
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -101,7 +101,7 @@ class Category
     /**
      * Set title
      *
-     * @param string $title
+     * @param  string   $title
      * @return Category
      */
     public function setTitle($title)
@@ -114,7 +114,7 @@ class Category
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -124,7 +124,7 @@ class Category
     /**
      * Set description
      *
-     * @param string $description
+     * @param  string   $description
      * @return Category
      */
     public function setDescription($description)
@@ -137,7 +137,7 @@ class Category
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -147,7 +147,7 @@ class Category
     /**
      * Set slug
      *
-     * @param string $slug
+     * @param  string   $slug
      * @return Category
      */
     public function setSlug($slug)
@@ -160,7 +160,7 @@ class Category
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
@@ -170,7 +170,7 @@ class Category
     /**
      * Set createdAt
      *
-     * @param \DateTime $createdAt
+     * @param  \DateTime $createdAt
      * @return Category
      */
     public function setCreatedAt($createdAt)
@@ -183,7 +183,7 @@ class Category
     /**
      * Get createdAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -193,7 +193,7 @@ class Category
     /**
      * Set updatedAt
      *
-     * @param \DateTime $updatedAt
+     * @param  \DateTime $updatedAt
      * @return Category
      */
     public function setUpdatedAt($updatedAt)
@@ -206,7 +206,7 @@ class Category
     /**
      * Get updatedAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -216,7 +216,7 @@ class Category
     /**
      * Set deletedAt
      *
-     * @param \DateTime $deletedAt
+     * @param  \DateTime $deletedAt
      * @return Category
      */
     public function setDeletedAt($deletedAt)
@@ -229,7 +229,7 @@ class Category
     /**
      * Get deletedAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDeletedAt()
     {
@@ -239,7 +239,7 @@ class Category
     /**
      * Add employees
      *
-     * @param \AppBundle\Entity\Employee $employees
+     * @param  \AppBundle\Entity\Employee $employees
      * @return Category
      */
     public function addEmployee(\AppBundle\Entity\Employee $employees)
@@ -262,7 +262,7 @@ class Category
     /**
      * Get employees
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getEmployees()
     {

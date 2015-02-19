@@ -53,12 +53,11 @@ class EmployeeAdmin extends Admin
             ->add('media',
                 'sonata_type_model_list',
                 array('required' => false),
-                array('link_parameters' => array('context' => 'employee')
+                array('link_parameters' => array('context' => 'employee'),
 //                'sonata_media_type', array(
  //               'provider' => 'sonata.media.provider.image',
    //             'context'  => 'employee'
             ));
-        ;
     }
 
     /**

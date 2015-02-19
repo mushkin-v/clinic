@@ -29,7 +29,6 @@ class CategoryAdmin extends Admin
             ->add('title')
             ->add('description')
             ->add('employees');
-        ;
     }
 
     /**
@@ -56,7 +55,6 @@ class CategoryAdmin extends Admin
             ->addIdentifier('title')
             ->add('description')
             ->add('employees');
-        ;
     }
 
     /**
@@ -70,6 +68,5 @@ class CategoryAdmin extends Admin
             ->add('title')
             ->add('description')
             ->add('employees');
-        ;
     }
 }

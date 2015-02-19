@@ -12,6 +12,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig', array('media'=>$this->getDoctrine()->getManager()->getRepository('AppBundle:Employee')->find('1')->getMedia()));
+        return $this->render('default/index.html.twig', array('media' => $this->getDoctrine()->getManager()->getRepository('AppBundle:Employee')->find('1')->getMedia()));
     }
 }

@@ -4,7 +4,6 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
-use Sonata\MediaBundle\Model\MediaInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Translatable\Translatable;
 
@@ -107,12 +106,11 @@ class Employee
     {
         return $this->getSlug();
     }
-    
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -122,7 +120,7 @@ class Employee
     /**
      * Set firstName
      *
-     * @param string $firstName
+     * @param  string   $firstName
      * @return Employee
      */
     public function setFirstName($firstName)
@@ -135,7 +133,7 @@ class Employee
     /**
      * Get firstName
      *
-     * @return string 
+     * @return string
      */
     public function getFirstName()
     {
@@ -145,7 +143,7 @@ class Employee
     /**
      * Set lastName
      *
-     * @param string $lastName
+     * @param  string   $lastName
      * @return Employee
      */
     public function setLastName($lastName)
@@ -158,7 +156,7 @@ class Employee
     /**
      * Get lastName
      *
-     * @return string 
+     * @return string
      */
     public function getLastName()
     {
@@ -168,7 +166,7 @@ class Employee
     /**
      * Set middleName
      *
-     * @param string $middleName
+     * @param  string   $middleName
      * @return Employee
      */
     public function setMiddleName($middleName)
@@ -181,7 +179,7 @@ class Employee
     /**
      * Get middleName
      *
-     * @return string 
+     * @return string
      */
     public function getMiddleName()
     {
@@ -191,7 +189,7 @@ class Employee
     /**
      * Set dob
      *
-     * @param \DateTime $dob
+     * @param  \DateTime $dob
      * @return Employee
      */
     public function setDob($dob)
@@ -204,7 +202,7 @@ class Employee
     /**
      * Get dob
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDob()
     {
@@ -214,7 +212,7 @@ class Employee
     /**
      * Set position
      *
-     * @param string $position
+     * @param  string   $position
      * @return Employee
      */
     public function setPosition($position)
@@ -227,7 +225,7 @@ class Employee
     /**
      * Get position
      *
-     * @return string 
+     * @return string
      */
     public function getPosition()
     {
@@ -237,7 +235,7 @@ class Employee
     /**
      * Set slug
      *
-     * @param string $slug
+     * @param  string   $slug
      * @return Employee
      */
     public function setSlug($slug)
@@ -250,7 +248,7 @@ class Employee
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
@@ -260,7 +258,7 @@ class Employee
     /**
      * Set createdAt
      *
-     * @param \DateTime $createdAt
+     * @param  \DateTime $createdAt
      * @return Employee
      */
     public function setCreatedAt($createdAt)
@@ -273,7 +271,7 @@ class Employee
     /**
      * Get createdAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -283,7 +281,7 @@ class Employee
     /**
      * Set updatedAt
      *
-     * @param \DateTime $updatedAt
+     * @param  \DateTime $updatedAt
      * @return Employee
      */
     public function setUpdatedAt($updatedAt)
@@ -296,7 +294,7 @@ class Employee
     /**
      * Get updatedAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -306,7 +304,7 @@ class Employee
     /**
      * Set deletedAt
      *
-     * @param \DateTime $deletedAt
+     * @param  \DateTime $deletedAt
      * @return Employee
      */
     public function setDeletedAt($deletedAt)
@@ -319,7 +317,7 @@ class Employee
     /**
      * Get deletedAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDeletedAt()
     {
@@ -329,7 +327,7 @@ class Employee
     /**
      * Set category
      *
-     * @param \AppBundle\Entity\Category $category
+     * @param  \AppBundle\Entity\Category $category
      * @return Employee
      */
     public function setCategory(\AppBundle\Entity\Category $category = null)
@@ -342,7 +340,7 @@ class Employee
     /**
      * Get category
      *
-     * @return \AppBundle\Entity\Category 
+     * @return \AppBundle\Entity\Category
      */
     public function getCategory()
     {
@@ -352,7 +350,7 @@ class Employee
     /**
      * Set media
      *
-     * @param \Application\Sonata\MediaBundle\Entity\Gallery $media
+     * @param  \Application\Sonata\MediaBundle\Entity\Gallery $media
      * @return Employee
      */
     public function setMedia(\Application\Sonata\MediaBundle\Entity\Gallery $media = null)
@@ -365,7 +363,7 @@ class Employee
     /**
      * Get media
      *
-     * @return \Application\Sonata\MediaBundle\Entity\Gallery 
+     * @return \Application\Sonata\MediaBundle\Entity\Gallery
      */
     public function getMedia()
     {
