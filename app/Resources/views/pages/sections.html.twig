@@ -1,0 +1,20 @@
+{% extends ":default:index.html.twig" %}
+
+{% block page %}
+
+<!-- BODY -->
+<section id="Body">
+    <div class="row clearfix body-text">
+        <h3 class="body-title img-rounded">Відділеня поліклініки</h3>
+        <ol>
+            {% for section in sections %}
+                <li class="body-section img-rounded">
+                    <a href="{{ path('section', {'slug':section.slug}) }}">{{ section.title }}</a>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+</section>
+<!-- /BODY -->
+
+{% endblock %}

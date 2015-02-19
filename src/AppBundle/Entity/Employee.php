@@ -33,17 +33,17 @@ class Employee
     /**
      * @var string
      * @Gedmo\Translatable
-     * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $lastName;
+    private $middleName;
 
     /**
      * @var string
      * @Gedmo\Translatable
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=255)
      */
-    private $middleName;
+    private $lastName;
 
     /**
      * @var /Datetime
@@ -207,8 +207,13 @@ class Employee
     public function getDob()
     {
         return $this->dob;
+        //->format('d-m-Y')
     }
 
+    public function getDobString()
+    {
+        return $this->dob->format('d-m-Y');
+    }
     /**
      * Set position
      *

@@ -6,9 +6,27 @@
     text-align: center;
 }
 
+.body-section {
+     margin-top: 10px;
+     background-color: #00a65a;
+     padding: 10px;
+     font-family: "RobotoLight", sans-serif;
+     color: #f5f5f5;
+     text-align: center;
+ }
+
+.body-section a{
+    color: #f5f5f5;
+}
+
+.body-section a:hover{
+    color:#89E6C4;
+}
+
 .body-text{
     background-color: #f5f5f5;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-family: "RobotoCondensedLight", sans-serif;
     color: #101010;
     text-align: justify;

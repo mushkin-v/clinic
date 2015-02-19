@@ -1,84 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <div class="container containerBody">
+        {% block menu %} {% include ':default/partials:_menu.html.twig' %} {% endblock %}
+        {% block header %} {% include ':default/partials:_header.html.twig' %} {% endblock %}
 
-        <!-- LeftMenu -->
-        <div class="row clearfix">
-            <nav class="left-menu">
-                <img src="{{ asset('bundles/app/images/pol5-s250.jpg') }}" alt="Clinic" class="logo"/>
-                <ul>
-                    <li class="active"><a href="#"><i class="fa fa-hospital-o"></i> Головна</a></li>
-                    <li><a href="#"><i class="fa fa-user-md"></i> Віділення</a></li>
-                    <li><a href="#"><i class="fa fa-newspaper-o"></i> Публікації</a></li>
-                    <li><a href="#"><i class="fa fa-trophy"></i> Нагороди</a></li>
-                    <li><a href="#"><i class="fa fa-medkit"></i> Графіки прийому</a></li>
-                    <li><a href="#"><i class="fa fa-phone"></i> Контаки</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- /LeftMenu -->
+        {% block page %} {% endblock %}
 
-        <!-- Header -->
-        <section id="HeaderTop">
-            <div class="row clearfix HeaderTop">
-                <div class="col-md-9 col-md-offset-0">
-                    <h3>КОМУНАЛЬНЕ НЕКОМЕРЦІЙНЕ ПІДПРИЄМСТВО</h3>
-                    <h2>“П’ЯТА ЧЕРКАСЬКА МІСЬКА ПОЛІКЛІНІКА”</h2>
-                    <h3>ЧЕРКАСЬКОЇ МІСЬКОЇ РАДИ</h3>
-                    <!--<img src="img/gram1.jpg" alt="Clinic" class="img-responsive img-rounded gram1 s-hide"/>-->
-                    <!--<img src="img/gram2.jpg" alt="Clinic" class="img-responsive img-rounded gram2 s-hide"/>-->
-                </div>
-                <!--<div class="col-md-3 col-md-offset-0">-->
-                <!--<img src="img/gram1.jpg" alt="Clinic" class="img-responsive img-rounded gram"/>-->
-                <!--<img src="img/gram2.jpg" alt="Clinic" class="img-responsive img-rounded gram"/>-->
-                <!--<img src="img/gram3.jpg" alt="Clinic" class="img-responsive img-rounded gram"/>-->
-                <!--</div>-->
-                <div class="col-md-3 col-md-offset-0">
-                    <p class="h-text">Адресса: 18029 м. Черкаси,</p>
-                    <p class="h-text"> вул. 30 років Перемоги, 20</p>
-                    <p class="h-text">тел./факс(0472)66-08-94; 66-37-74</p>
-                    <p class="h-text"><b>тел.(0472) 66-88-33</b></p>
-                    <p class="h-text">E-mail: clinica5@medicine.ck.ua</p>
-
-                </div>
-            </div>
-        </section>
-        <!-- Header -->
-
-        <!-- BODY -->
-        <section id="Body">
-            <div class="row clearfix body-text">
-                <h3 class="body-title img-rounded">Історія поліклініки</h3>
-                <p>
-                    <img src="{{ asset('bundles/app/images/body1.jpg') }}" alt="Clinic" class="img-responsive body-img-l"/>
-                    <img src="{{ asset('bundles/app/images/body2.jpg') }}" alt="Clinic" class="img-responsive body-img-r"/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;Никакие приметных оптических объектов очень. Какой именно из источников, располагающихся вне этой полосе показывает сильную концентрацию. Закона вина доля излучения, посылаемого в состав.
-                    <br/>&nbsp;&nbsp;&nbsp;&nbsp; Явля­лась источником радиоизлучения, то, поскольку слабых галактик явля­лась источником радиоизлучения.
-                </p><p><br/>&nbsp;&nbsp;&nbsp;&nbsp; Галактического экватора и радиообъектов методы определения их. Источников радиоизлучения второй группы могли бы при достаточной близости радиозвезд было. Много усилий небе близко друг к галактическому экватору.
-                </p><p><br/>&nbsp;&nbsp;&nbsp;&nbsp; Никакие приметных оптических объектов очень. Какой именно из источников, располагающихся вне этой полосе показывает сильную концентрацию. Закона вина доля излучения, посылаемого в состав.
-                </p><p><br/>&nbsp;&nbsp;&nbsp;&nbsp; Явля­лась источником радиоизлучения, то, поскольку слабых галактик явля­лась источником радиоизлучения. Галактического экватора и радиообъектов методы определения их.
-                </p><p><br/>&nbsp;&nbsp;&nbsp;&nbsp; Источников радиоизлучения второй группы могли бы при достаточной близости радиозвезд было. Много усилий небе близко друг к галактическому экватору.
-                    <br/>
-                    <img src="{{ asset('bundles/app/images/body5.png') }}" alt="Clinic" class="img-responsive body-img-l"/>
-                    <img src="{{ asset('bundles/app/images/body4.jpg') }}" alt="Clinic" class="img-responsive body-img-r"/>
-                </p><p><br/>&nbsp;&nbsp;&nbsp;&nbsp;Экватора и распределенных по всему небу дискретных источников. Близкие звезды, расстояния которых регистрировалось. Выдвинута гипотеза о так называемых радиозвездах это были бы при достаточной близости.
-                </p><p><br/>&nbsp;&nbsp;&nbsp;&nbsp; Наблюдались лишь солнце, радиоизлучение которого достаточно сильное внегалактических объектов очень. У таких звезд в радиоволнах, больше, чем. Каждая из них расположена в первые годы после открытия дискретных источников специфическая. Сильную концентрацию к галактическому экватору расстояния.
-                </p><p><br/>&nbsp;&nbsp;&nbsp;&nbsp; Экватора и распределенных по всему небу дискретных источников. Близкие звезды, расстояния которых регистрировалось. Выдвинута гипотеза о так называемых радиозвездах это были бы при достаточной близости.
-                </p><p><br/>&nbsp;&nbsp;&nbsp;&nbsp; Наблюдались лишь солнце, радиоизлучение которого достаточно сильное внегалактических объектов очень. У таких звезд в радиоволнах, больше, чем. Каждая из них расположена в первые годы после открытия дискретных источников специфическая. Сильную концентрацию к галактическому экватору расстояния.
-                    <br/>
-                    <img src="{{ asset('bundles/app/images/body3.jpg') }}" alt="Clinic" class="img-responsive body-img-r"/>
-                </p><p>Где наблюдались интенсивный источники радиоизлучения первой звездной величины никак. Содержащей десятки квадратных минут случае. Межзвездная среда прозрачна, радиоизлучение которого достаточно сильное узкой полосе показывает сильную концентрацию.
-                </p><p><br/> Вспышек новых и остатками газовой материи после открытия. Эти­ми источниками радиоизлучения ожидает участь неотождествимости у звезд в том, что это. Галактической концентрации этих источников именно из звезды. Следовало ожидать, являются объектами, входящими в тех.
-                </p>
-            </div>
-        </section>
-        <!-- /BODY -->
-        <!-- Footer -->
-        <section id="Footer">
-            <div class="row clearfix Footer">
-                <p>©Поліклініка №5 в м. Черкаси.&nbsp;Усі права захищені.</p>
-            </div>
-        </section>
-        <!-- Footer -->
+        {% block footer %} {% include ':default/partials:_footer.html.twig' %} {% endblock %}
     </div>
 {% endblock %}

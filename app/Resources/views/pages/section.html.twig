@@ -1,0 +1,18 @@
+{% extends ":default:index.html.twig" %}
+
+{% block page %}
+
+<!-- BODY -->
+<section id="Body">
+    <div class="row clearfix body-text">
+        <h3 class="body-title img-rounded">Робітники поліклініки</h3>
+        <ol>
+        {% for employee in employees %}
+            <li>{{ include(':pages:employee.html.twig', { 'employee': employee }) }}</li>
+        {% endfor %}
+        </ol>
+    </div>
+</section>
+<!-- /BODY -->
+
+{% endblock %}
