@@ -1,0 +1,38 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	font-family: RobotoLight, serif;
+	font-size: 16px;
+	background-color:#021310;
+}
+
+.containerBody{
+	margin: 0;
+	padding: 0;
+	padding-left: 260px;
+	padding-right: 15px;
+	width: auto;
+}
