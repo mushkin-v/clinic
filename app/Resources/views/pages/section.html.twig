@@ -5,7 +5,7 @@
 <!-- BODY -->
 <section id="Body">
     <div class="row clearfix body-text">
-        <h3 class="body-title img-rounded">Робітники поліклініки</h3>
+        <h3 class="body-title">Робітники поліклініки</h3>
         <ol>
         {% for employee in employees %}
             <li>{{ include(':pages:employee.html.twig', { 'employee': employee }) }}</li>

@@ -18,3 +18,13 @@ gallery:
 media:
     resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
     prefix: /media
+
+login:
+  pattern:   /login
+  defaults:  { _controller: AppBundle:Default:login }
+
+login_check:
+  pattern:   /login_check
+
+logout:
+   pattern: /logout

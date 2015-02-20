@@ -5,9 +5,42 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\SecurityContext;
+//use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder; for PASS GENERATOR
 
 class DefaultController extends Controller
 {
+    public function loginAction()
+    {
+        $request = $this->get('request');
+        $session = $this->get('session');
+
+        if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
+            $error = $request->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
+        } else {
+            $error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
+            $session->remove(SecurityContext::AUTHENTICATION_ERROR);
+        }
+
+        return $this->render(':default:login.html.twig', array(
+            'last_username' => $session->get(SecurityContext::LAST_USERNAME),
+            'error'         => $error,
+        ));
+    }
+
+//      PASS GENERATOR
+//    /**
+//     * @Route("/pass", name="pass")
+//     */
+//    public function passAction()
+//    {
+//        $messageDigestPasswordEncoder= new MessageDigestPasswordEncoder;
+//
+//        var_dump($messageDigestPasswordEncoder); // you'll see the default options
+//        var_dump($messageDigestPasswordEncoder->encodePassword('password', ''));
+//
+//    }
+
     /**
      * @Route("/", name="homepage")
      */
