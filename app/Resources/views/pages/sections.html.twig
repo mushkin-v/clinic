@@ -8,7 +8,7 @@
         <h3 class="body-title">Відділеня поліклініки</h3>
         <ol>
             {% for section in sections %}
-                <li class="body-section img-rounded">
+                <li class="body-section">
                     <a href="{{ path('section', {'slug':section.slug}) }}">{{ section.title }}</a>
                 </li>
             {% endfor %}

@@ -47,17 +47,26 @@ class EmployeeAdmin extends Admin
             ->add('firstName')
             ->add('middleName')
             ->add('lastName')
+            ->add('avatar', 'sonata_type_model_list', [
+                'required' => false,
+                'btn_list' => false,
+            ], [
+                'link_parameters' => [
+                    'context'  => 'employee',
+                    'provider' => 'sonata.media.provider.image',
+                ],
+            ])
             ->add('dob', 'sonata_type_date_picker')
             ->add('position')
             ->add('category',  'sonata_type_model', array('required' => false))
             ->add('media',
                 'sonata_type_model_list',
                 array('required' => false),
-                array('link_parameters' => array('context' => 'employee'),
-//                'sonata_media_type', array(
- //               'provider' => 'sonata.media.provider.image',
-   //             'context'  => 'employee'
-            ));
+                array('link_parameters' => array('context' => 'employee')))
+//              --->'sonata_media_type', array(
+//               'provider' => 'sonata.media.provider.image',
+//               'context'  => 'employee'))
+            ;
     }
 
     /**
