@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="{{ asset('bundles/app/css/body.css') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/app/css/media.css') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/app/css/footer.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/app/css/swipebox.css') }}" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     {% endblock %}
 </head>
@@ -50,6 +51,14 @@
             <script src="{{ asset('bundles/app/libs/countdown/jquery.countdown-ru.js') }}"></script>
             <script src="{{ asset('bundles/app/libs/landing-nav/navigation.js') }}"></script>
             <script src="{{ asset('bundles/app/js/common.js') }}"></script>
+            <script src="{{ asset('bundles/app/libs/jquery/jquery.swipebox.js') }}"></script>
+            <script type="text/javascript">
+                ;( function( $ ) {
+
+                    $( '.swipebox' ).swipebox();
+
+                } )( jQuery );
+            </script>
             <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
             <!-- Google Analytics counter --><!-- /Google Analytics counter -->
         {% endblock %}

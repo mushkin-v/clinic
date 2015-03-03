@@ -1,11 +1,9 @@
 <!-- Employee card -->
-<p>{{ employee.firstname }} {{ employee.middlename }} {{ employee.lastname }}</p>
-<p>{{ employee.getdobstring }}</p>
-<p>{{ employee.position }}</p>
-{% if employee.media %}
-    {% path employee.media, 'preview' %}
-    {% media employee.media, 'preview' %}
+{% if employee.avatar %}
+{#    {% path employee.avatar, 'preview' %} #}
+    {% media employee.avatar, 'preview' %}
 {% endif %}
-<br>
-<br>
+<p>{{ employee.firstname }} {{ employee.middlename }} {{ employee.lastname }}</p>
+<p>День рождения {{ employee.getdobstring }}</p>
+<p>{{ employee.position }}</p>
 <!-- /Employee card -->

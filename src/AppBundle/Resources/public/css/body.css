@@ -1,3 +1,12 @@
+.body-img-gallery{
+    width: 140px;
+    margin: 10px;
+}
+
+.body-gallery{
+    text-align: center;
+}
+
 .body-title {
     background-color: #4a7f9c;
     padding: 12px;
@@ -9,26 +18,36 @@
     text-align: center;
 }
 
+.body-main-text{
+    font-family: "RobotoCondensedLight", sans-serif;
+    font-size: medium;
+    border: solid 1px #79b7e7;
+    padding: 1%;
+    margin-bottom: 20px;
+    margin-left: 19%;
+    margin-right: 19%;
+}
+
 .body-appointment{
     width: 100%;
-    height: 700px
+    height: 600px;
 }
 
 .body-section {
      margin-top: 10px;
-     background-color: #75a896;
+     background-color: #cce3f0;
+     color: #001f3f;
      padding: 10px;
      font-family: "RobotoLight", sans-serif;
-     color: #f5f5f5;
-     text-align: center;
+     text-align: left;
  }
 
 .body-section a{
-    color: #f5f5f5;
+    color: #001f3f;
 }
 
 .body-section a:hover{
-    color:#89E6C4;
+    color:#873b3c;
 }
 
 .body-text{
@@ -42,13 +61,13 @@
 
 .body-img-l{
     float: left;
-    width: 240px;
+    width: 140px;
     margin-right: 10px;
 }
 
 .body-img-r{
     float: right;
-    width: 240px;
+    width: 140px;
     margin-left: 10px;
 }
 

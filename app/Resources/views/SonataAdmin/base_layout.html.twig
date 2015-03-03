@@ -1,0 +1,43 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">#}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/bootstrap3-wysihtml5.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/sonataAdmin.css') }}" />
+{% endblock %}
+
+{% block side_bar_after_nav %}
+{% endblock %}
+
+{% block javascripts %}
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    {#<script type="text/javascript">var jQuery210 = jQuery.noConflict(true);</script>#}
+
+    {#<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>#}
+    <script src="{{ asset('bundles/app/libs/wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/libs/wysihtml5/bootstrap-wysihtml5.ua-UA.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.wysihtml5').wysihtml5({
+                    fa: true,
+                    locale: 'ua-UA',
+                    "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+                    "emphasis": true, //Italics, bold, etc. Default true
+                    "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+                    "html": true, //Button which allows you to edit the generated HTML. Default false
+                    "link": true, //Button to insert a link. Default true
+                    "image": true, //Button to insert an image. Default true,
+                    "color": true, //Button to change color of font
+                    "blockquote": true, //Blockquote
+                    "size": '<buttonsize>' //default: none, other options are xs, sm, lg
+                }
+        );
+        });
+    </script>
+
+    {{ parent() }}
+
+{% endblock %}

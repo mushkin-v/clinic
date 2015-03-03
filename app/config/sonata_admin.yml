@@ -1,14 +1,15 @@
 sonata_admin:
     title:      %sonata_admin.title%
     title_logo: %sonata_admin.logo_title%
-
+    templates:
+      layout:  :SonataAdmin:base_layout.html.twig
     dashboard:
         groups:
             Clinic:
-                label: Main.Panel
+                label: Главная панель
                 label_catalogue: AppBundle
             sonata_media:
-                label: Media.Library
+                label: Медиа панель
                 label_catalogue: AppBundle
 #            Hidden:
 
@@ -23,6 +24,26 @@ sonata_admin:
                 type: sonata.admin.block.admin_list
                 settings:
                     groups: [sonata_media, Hidden]
+    assets:
+        javascripts: # changed order of js assets loading
+#            - 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'
+#            - 'bundles/app/libs/wysihtml5/bootstrap3-wysihtml5.all.min.js'
+#            - 'bundles/app/libs/wysihtml5/bootstrap-wysihtml5.ua-UA.js'
+
+#            - bundles/sonataadmin/vendor/jquery/dist/jquery.min.js
+            - bundles/sonataadmin/vendor/jquery.scrollTo/jquery.scrollTo.min.js
+            - bundles/sonatacore/vendor/moment/min/moment.min.js
+            - bundles/sonataadmin/vendor/bootstrap/dist/js/bootstrap.min.js
+            - bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js
+            - bundles/sonataadmin/vendor/jqueryui/ui/minified/jquery-ui.min.js
+            - bundles/sonataadmin/vendor/jqueryui/ui/minified/i18n/jquery-ui-i18n.min.js
+            - bundles/sonataadmin/jquery/jquery.form.js
+            - bundles/sonataadmin/jquery/jquery.confirmExit.js
+            - bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js
+            - bundles/sonataadmin/vendor/select2/select2.min.js
+            - bundles/sonataadmin/App.js
+            - bundles/sonataadmin/Admin.js
+
 
 sonata_doctrine_orm_admin:
     templates:

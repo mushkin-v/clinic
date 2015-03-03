@@ -6,13 +6,15 @@
 <section id="Body">
     <div class="row clearfix body-text">
         <h3 class="body-title">Відділеня поліклініки</h3>
-        <ol>
+        <div class="body-main-text">
+            <ol>
             {% for section in sections %}
                 <li class="body-section">
                     <a href="{{ path('section', {'slug':section.slug}) }}">{{ section.title }}</a>
                 </li>
             {% endfor %}
-        </ol>
+            </ol>
+        </div>
     </div>
 </section>
 <!-- /BODY -->
