@@ -23,7 +23,7 @@ class TagAdmin extends Admin
      */
     protected function configureShowFields(ShowMapper $showMapper)
     {
-                $showMapper
+        $showMapper
                     ->add('title')
                     ->add('posts');
     }
@@ -35,9 +35,8 @@ class TagAdmin extends Admin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
-                $formMapper->add('title');
-
-            }
+        $formMapper->add('title');
+    }
 
     /**
      * @param \Sonata\AdminBundle\Datagrid\ListMapper $listMapper
@@ -46,8 +45,8 @@ class TagAdmin extends Admin
      */
     protected function configureListFields(ListMapper $listMapper)
     {
-                $listMapper->addIdentifier('title');
-            }
+        $listMapper->addIdentifier('title');
+    }
 
     /**
      * @param \Sonata\AdminBundle\Datagrid\DatagridMapper $datagridMapper
@@ -56,7 +55,7 @@ class TagAdmin extends Admin
      */
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-                $datagridMapper
+        $datagridMapper
                     ->add('title')
                     ->add('posts');
     }

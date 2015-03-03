@@ -23,7 +23,7 @@ class PostAdmin extends Admin
      */
     protected function configureShowFields(ShowMapper $showMapper)
     {
-                $showMapper
+        $showMapper
                     ->add('title')
                     ->add('shortDescription')
                     ->add('text')
@@ -37,10 +37,10 @@ class PostAdmin extends Admin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
-                $formMapper
+        $formMapper
                     ->add('title')
                     ->add('shortDescription')
-                    ->add('text', 'textarea', array('attr'=>array('class'=>'wysihtml5')))
+                    ->add('text', 'textarea', array('attr' => array('class' => 'wysihtml5')))
                     ->add('mainPicture', 'sonata_type_model_list', [
                             'required' => false,
                             'btn_list' => false,
@@ -65,7 +65,7 @@ class PostAdmin extends Admin
      */
     protected function configureListFields(ListMapper $listMapper)
     {
-                $listMapper
+        $listMapper
                     ->add('mainPicture', 'sonata_type_model_list', [
                         'required' => false,
                         'btn_list' => false,
@@ -86,7 +86,7 @@ class PostAdmin extends Admin
      */
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-                $datagridMapper
+        $datagridMapper
                     ->add('title')
                     ->add('shortDescription')
                     ->add('tags');

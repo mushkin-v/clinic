@@ -65,15 +65,12 @@ class DefaultController extends Controller
     public function sectionAction($slug)
     {
         if ($slug) {
-
             $section = $this->getDoctrine()->getManager()->getRepository('AppBundle:Category')->findBySlug($slug);
 
             $employees = $this->getDoctrine()->getManager()->getRepository('AppBundle:Employee')->findByCategory($section);
 
             return $this->render(':pages:section.html.twig', array('employees' => $employees));
-
         } else {
-
             return $this->render(':pages:main.html.twig');
         }
     }
@@ -109,8 +106,4 @@ class DefaultController extends Controller
     {
         return $this->render(':pages:contacts.html.twig');
     }
-
-
-
-
 }

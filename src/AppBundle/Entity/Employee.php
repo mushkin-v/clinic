@@ -392,7 +392,7 @@ class Employee
     }
 
     /**
-     * @param mixed $avatar
+     * @param  mixed $avatar
      * @return $this
      */
     public function setAvatar($avatar)
