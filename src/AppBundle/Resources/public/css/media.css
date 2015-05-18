@@ -6,16 +6,36 @@
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
- .s-hide {
-  display: none !important;
- }
+@media only screen and (max-width : 1024px) {
 
- .s-show {
-  display: block !important;
-  padding:0 0 !important;
-  margin: 0 0 !important;
- }
+    #HeaderTop h2 {
+    font-size: 95%;
+    }
+
+    #HeaderTop h3 {
+        font-size: 95%;
+    }
+
+    .h-text{
+        font-size: 70%;
+    }
+
+    .medals{
+        width: 100px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .s-hide {
+        display: none !important;
+    }
+
+    .s-show {
+        display: block !important;
+        padding:0 0 !important;
+        margin: 0 0 !important;
+    }
 }
 
 /* Small Devices, Tablets */
