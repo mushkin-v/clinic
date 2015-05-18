@@ -24,8 +24,12 @@
     border: solid 1px #79b7e7;
     padding: 1%;
     margin-bottom: 20px;
-    margin-left: 19%;
-    margin-right: 19%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.body-main-text h4{
+text-align: center;
 }
 
 .body-appointment{
