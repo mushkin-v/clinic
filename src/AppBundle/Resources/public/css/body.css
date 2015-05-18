@@ -107,3 +107,14 @@ text-align: center;
     background-color: #75a896;
     padding: 5px;
 }
+
+.body-contacts-text{
+    font-family: "RobotoCondensedLight", sans-serif;
+    font-size: medium;
+    text-align: center;
+    border: solid 1px #79b7e7;
+    padding: 1%;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
