@@ -28,7 +28,7 @@
     margin-right: 10%;
 }
 
-.body-main-text h4{
+.body-main-text h3{
 text-align: center;
 }
 
@@ -65,13 +65,13 @@ text-align: center;
 
 .body-img-l{
     float: left;
-    width: 140px;
+    width: 200px;
     margin-right: 10px;
 }
 
 .body-img-r{
     float: right;
-    width: 140px;
+    width: 200px;
     margin-left: 10px;
 }
 
