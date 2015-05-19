@@ -112,7 +112,7 @@ class Employee
 
     public function __toString()
     {
-        return $this->getSlug();
+        return $this->getFirstName().' '.$this->getLastName();
     }
 
     /**
