@@ -59,13 +59,10 @@ class EmployeeAdmin extends Admin
             ->add('dob', 'sonata_type_date_picker')
             ->add('position')
             ->add('category',  'sonata_type_model', array('required' => false))
-            ->add('media',
-                'sonata_type_model_list',
-                array('required' => false),
-                array('link_parameters' => array('context' => 'employee')))
-//              --->'sonata_media_type', array(
-//               'provider' => 'sonata.media.provider.image',
-//               'context'  => 'employee'))
+//            ->add('media',
+//                'sonata_type_model_list',
+//                array('required' => false),
+//                array('link_parameters' => array('context' => 'employee')))
             ;
     }
 

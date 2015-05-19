@@ -15,7 +15,7 @@ sonata_media:
 
             formats:
                 preview: { width: 100, quality: 70}
-                small: { width: 100 , quality: 70}
+#                small: { width: 100 , quality: 70}
                 big:   { width: 500 , quality: 70}
         post:
             providers:
@@ -23,17 +23,17 @@ sonata_media:
 
             formats:
                 preview:   { width: 100, quality: 100}
-                small:     { width: 200, quality: 100}
-                large:     { width: 600, quality: 100}
+#                small:     { width: 200, quality: 100}
+                big:     { width: 500, quality: 100}
 
-        employee:
+        employee: #avatar size is 500x500 px
             providers:
                 - sonata.media.provider.image
 
             formats:
                 preview:   { width: 100, quality: 100}
-                small:     { width: 200, quality: 100}
-                large:     { width: 600, quality: 100}
+#                small:     { width: 200, quality: 100}
+                big:     { width: 500, quality: 100}
     cdn:
         server:
             path: /uploads/media # http://media.sonata-project.org/
@@ -45,4 +45,4 @@ sonata_media:
 
     providers:
         image:
-            resizer: sonata.media.resizer.simple
+            resizer: sonata.media.resizer.square
