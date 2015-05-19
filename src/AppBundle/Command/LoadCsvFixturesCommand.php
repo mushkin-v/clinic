@@ -60,8 +60,11 @@ class LoadCsvFixturesCommand extends ContainerAwareCommand
             file_put_contents($ymlFile, $yaml);
 
             $output->writeln('Load is finished!');
+
         } else {
+
             $output->writeln('Load is failed!');
+
         }
     }
 
@@ -87,8 +90,11 @@ class LoadCsvFixturesCommand extends ContainerAwareCommand
             }
 
             return $yamlArray;
+
         } else {
-            return;
+
+            return null;
+
         }
     }
 }
