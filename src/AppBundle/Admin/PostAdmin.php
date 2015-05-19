@@ -40,7 +40,7 @@ class PostAdmin extends Admin
         $formMapper
                     ->add('title')
                     ->add('shortDescription')
-                    ->add('text', 'textarea', array('attr' => array('class' => 'wysihtml5')))
+                    ->add('text', 'textarea', array('attr' => array('class' => 'wysihtml5', 'style' => 'height:500px')))
                     ->add('mainPicture', 'sonata_type_model_list', [
                             'required' => false,
                             'btn_list' => false,

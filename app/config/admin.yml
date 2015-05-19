@@ -2,35 +2,35 @@ services:
    sonata.admin.employee:
        class: AppBundle\Admin\EmployeeAdmin
        tags:
-           - { name: sonata.admin, manager_type: orm, group: "Clinic", label: "Работники" }
+           - { name: sonata.admin, manager_type: orm, group: "Clinic", label: "Працівники" }
        arguments:
            - ~
            - AppBundle\Entity\Employee
            - ~
        calls:
-           - [ setTranslationDomain, [AppBundle]]
+           - [ setTranslationDomain, [messages]]
 
    sonata.admin.category:
        class: AppBundle\Admin\CategoryAdmin
        tags:
-           - { name: sonata.admin, manager_type: orm, group: "Clinic", label: "Отделения" }
+           - { name: sonata.admin, manager_type: orm, group: "Clinic", label: "Відділення" }
        arguments:
            - ~
            - AppBundle\Entity\Category
            - ~
        calls:
-           - [ setTranslationDomain, [AppBundle]]
+           - [ setTranslationDomain, [messages]]
 
    sonata.admin.post:
        class: AppBundle\Admin\PostAdmin
        tags:
-           - { name: sonata.admin, manager_type: orm, group: "Clinic", label: "Публикации" }
+           - { name: sonata.admin, manager_type: orm, group: "Clinic", label: "Публікації" }
        arguments:
            - ~
            - AppBundle\Entity\Post
            - ~
        calls:
-           - [ setTranslationDomain, [AppBundle]]
+           - [ setTranslationDomain, [messages]]
 
    sonata.admin.tag:
           class: AppBundle\Admin\TagAdmin
@@ -41,6 +41,6 @@ services:
               - AppBundle\Entity\Tag
               - ~
           calls:
-              - [ setTranslationDomain, [AppBundle]]
+              - [ setTranslationDomain, [messages]]
 
 

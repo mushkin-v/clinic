@@ -2,35 +2,42 @@ sonata_admin:
     title:      %sonata_admin.title%
     title_logo: %sonata_admin.logo_title%
     templates:
-      layout:  :SonataAdmin:base_layout.html.twig
+#      layout:  :SonataAdmin:base_layout.html.twig
+      layout: ::SonataAdmin/standard_layout.html.twig
+      edit: ::SonataAdmin/CRUD/edit.html.twig
+
     dashboard:
         groups:
             Clinic:
-                label: Главная панель
+                label: Головна панель
                 label_catalogue: AppBundle
             sonata_media:
-                label: Медиа панель
+                label: Медіа панель
                 label_catalogue: AppBundle
 #            Hidden:
 
         blocks:
             -
                 position: left
+                class: col-md-10
                 type: sonata.admin.block.admin_list
                 settings:
-                    groups: [Clinic]
+                    groups: [Clinic, sonata_media]
             -
                 position: right
-                type: sonata.admin.block.admin_list
+                class: col-md-6
+                type: sonata.block.service.text
                 settings:
-                    groups: [sonata_media, Hidden]
+                    content: >
+                        <h3 style="text-align: center"><code>Вітаємо Вас в Адміністративній Панелі</code></h3>
+                        <h4 style="text-align: center">П’ятої Черкаської міської поліклініки</h4>
+                        <p style="text-align: center"><code>Контакти розробника:</code></p>
+                        <p style="text-align: center"> Мушкін Віталій <code>+38(093)-977-77-01</code></p>
+                        <p style="text-align: center">E-mail: <code>mushkin.v@gmail.com</code></p>
+
     assets:
         javascripts: # changed order of js assets loading
-#            - 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'
-#            - 'bundles/app/libs/wysihtml5/bootstrap3-wysihtml5.all.min.js'
-#            - 'bundles/app/libs/wysihtml5/bootstrap-wysihtml5.ua-UA.js'
-
-#            - bundles/sonataadmin/vendor/jquery/dist/jquery.min.js
+            - js/jquery-2.1.0.min.js
             - bundles/sonataadmin/vendor/jquery.scrollTo/jquery.scrollTo.min.js
             - bundles/sonatacore/vendor/moment/min/moment.min.js
             - bundles/sonataadmin/vendor/bootstrap/dist/js/bootstrap.min.js
@@ -44,7 +51,7 @@ sonata_admin:
             - bundles/sonataadmin/App.js
             - bundles/sonataadmin/Admin.js
 
-
 sonata_doctrine_orm_admin:
     templates:
         form: [:SonataAdmin:form_admin_fields.html.twig]
+

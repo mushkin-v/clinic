@@ -45,4 +45,4 @@ sonata_media:
 
     providers:
         image:
-            resizer: sonata.media.resizer.square
+            resizer: sonata.media.resizer.simple

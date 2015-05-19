@@ -92,7 +92,6 @@ class EmployeeAdmin extends Admin
             ->add('dob', 'date')
             ->add('position')
             ->add('category')
-            ->add('media')
         ;
     }
 
