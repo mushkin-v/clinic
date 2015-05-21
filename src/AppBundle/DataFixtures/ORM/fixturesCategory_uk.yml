@@ -1,0 +1,62 @@
+AppBundle\Entity\Category:
+  category1:
+    title: Адміністрація
+    description: Адміністрація
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category2:
+    title: Відділення загальної практики та сімейної медицини №1
+    description: Відділення загальної практики та сімейної медицини №1
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category3:
+    title: Відділення загальної практики та сімейної медицини №2
+    description: Відділення загальної практики та сімейної медицини №2
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category4:
+    title: Відділення хірургії
+    description: Відділення хірургії
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category5:
+    title: Відділення профілактики
+    description: Відділення профілактики
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category6:
+    title: Відділення променевої діагностики
+    description: Відділення променевої діагностики
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category7:
+    title: Денний стаціонар
+    description: Денний стаціонар
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category8:
+    title: Відділення фізіотерапії та реабілітації
+    description: Відділення фізіотерапії та реабілітації
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category9:
+    title: Лабораторія
+    description: Лабораторія
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category10:
+    title: Відділення функціональної діагностики
+    description: Відділення функціональної діагностики
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category11:
+    title: Рефлексо-терапія
+    description: Рефлексо-терапія
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+  category12:
+    title: Неврологія
+    description: Неврологія
+    createdAt: <dateTimeBetween('-200 days', 'now')>
+    updatedAt: <dateTimeBetween($createdAt, 'now')>
+

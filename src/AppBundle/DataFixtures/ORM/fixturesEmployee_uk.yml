@@ -1,0 +1,661 @@
+AppBundle\Entity\Employee:
+    employee1:
+        firstName: Жанна
+        middleName: Валеріївна
+        lastName: Бассараб
+        dob: <dateTime()>
+        position: Біолог
+        avatar: <getMedia("avatars/Бассараб Жанна Валеріївна.jpg", "employee")>
+        category: '@category9'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee2:
+        firstName: Олена
+        middleName: Вячеславівна
+        lastName: Березовська
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Березовська Олена Вячеславівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee3:
+        firstName: Віктор
+        middleName: Васильович
+        lastName: Березовський
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Березовський Віктор Васильович.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee4:
+        firstName: Ніна
+        middleName: Федорівна
+        lastName: Бицюк
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Бицюк Ніна Федорівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee5:
+        firstName: Ольга
+        middleName: Валентинівна
+        lastName: Бровченко
+        dob: <dateTime()>
+        position: Лікар
+        avatar: <getMedia("avatars/Бровченко Ольга Валентинівна.jpg", "employee")>
+        category: '@category1'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee6:
+        firstName: Лариса
+        middleName: Степанівна
+        lastName: Врабій
+        dob: <dateTime()>
+        position: 'Головний бухгалтер'
+        avatar: <getMedia("avatars/Врабій Лариса Степанівна.jpg", "employee")>
+        category: '@category1'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee7:
+        firstName: Світлана
+        middleName: Вікторівна
+        lastName: Гайворонська
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Гайворонська Світлана Вікторівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee8:
+        firstName: Ольга
+        middleName: Михайлівна
+        lastName: Глоговська
+        dob: <dateTime()>
+        position: 'Лікар дерматолог'
+        avatar: <getMedia("avatars/Глоговська Ольга Михайлівна.jpg", "employee")>
+        category: '@category10'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee9:
+        firstName: Валентина
+        middleName: Михайлівна
+        lastName: Гончарук
+        dob: <dateTime()>
+        position: 'Завідуючий відділенням профілактики'
+        avatar: <getMedia("avatars/Гончарук Валентина Михайлівна.jpg", "employee")>
+        category: '@category5'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee10:
+        firstName: Сергій
+        middleName: Васильович
+        lastName: Горошко
+        dob: <dateTime()>
+        position: 'Лікар хірург'
+        avatar: <getMedia("avatars/Горошко Сергій Васильович.jpg", "employee")>
+        category: '@category4'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee11:
+        firstName: Світлана
+        middleName: Іванівна
+        lastName: Гребенникова
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Гребенникова Світлана Іванівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee12:
+        firstName: Тетяна
+        middleName: Іванівна
+        lastName: Гричаненко
+        dob: <dateTime()>
+        position: 'Завідуючий відділенням ЗПСМ №1'
+        avatar: <getMedia("avatars/Гричаненко Тетяна Іванівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee13:
+        firstName: Раїса
+        middleName: Василівна
+        lastName: Демченко
+        dob: <dateTime()>
+        position: 'Завідуючий лабораторним  відділенням'
+        avatar: <getMedia("avatars/Демченко Раїса Василівна.jpg", "employee")>
+        category: '@category9'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee14:
+        firstName: Анатолій
+        middleName: Петрович
+        lastName: Дибенко
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Дибенко Анатолій Петрович.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee15:
+        firstName: Олена
+        middleName: Ігорівна
+        lastName: Диміч
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Диміч  Олена Ігорівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee16:
+        firstName: Любов
+        middleName: Павлівна
+        lastName: Диранова
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Диранова Любов Павлівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee17:
+        firstName: Ірина
+        middleName: Геннадіївна
+        lastName: Доброчинська
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Доброчинська Ірина Геннадіївна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee18:
+        firstName: Любов
+        middleName: Миколаївна
+        lastName: Журавель
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Журавель Любов Миколаївна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee19:
+        firstName: Олена
+        middleName: Іванівна
+        lastName: Казани
+        dob: <dateTime()>
+        position: 'Лікар інфекціонист'
+        avatar: <getMedia("avatars/Казани Олена Іванівна.jpg", "employee")>
+        category: '@category11'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee20:
+        firstName: Марина
+        middleName: Михайлівна
+        lastName: Карпець
+        dob: <dateTime()>
+        position: 'Лікар кардіолог'
+        avatar: <getMedia("avatars/Карпець Марина Михайлівна.jpg", "employee")>
+        category: '@category11'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee21:
+        firstName: Інга
+        middleName: Іванівна
+        lastName: Касаткіна
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Касаткіна Інга Іванівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee22:
+        firstName: Світлана
+        middleName: Євгенівна
+        lastName: Каунова
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Каунова Світлана Євгенівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee23:
+        firstName: Людмила
+        middleName: Володимирівна
+        lastName: Клок
+        dob: <dateTime()>
+        position: 'Лікар травматолог'
+        avatar: <getMedia("avatars/Клок Людмила Володимирівна.jpg", "employee")>
+        category: '@category4'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee24:
+        firstName: Валентина
+        middleName: Павлівна
+        lastName: Ковбасій
+        dob: <dateTime()>
+        position: 'Лікар гінеколог'
+        avatar: <getMedia("avatars/Ковбасі Валентина Павлівна.jpg", "employee")>
+        category: '@category10'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee25:
+        firstName: Жанна
+        middleName: Олександрівна
+        lastName: Кочубей
+        dob: <dateTime()>
+        position: 'Лікар невропатолог'
+        avatar: <getMedia("avatars/Кочубей Жанна Олександрівна.jpg", "employee")>
+        category: '@category12'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee26:
+        firstName: Марина
+        middleName: Михайлівна
+        lastName: Красільник
+        dob: <dateTime()>
+        position: 'Завідуючий рентген відділенням'
+        avatar: <getMedia("avatars/Красільник Марина Михайлівна.jpg", "employee")>
+        category: '@category6'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee27:
+        firstName: Ніна
+        middleName: Михайлівна
+        lastName: Лисенко
+        dob: <dateTime()>
+        position: 'Старша санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Лисенко Ніна Михайлівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee28:
+        firstName: Роман
+        middleName: Станіславович
+        lastName: Лихолай
+        dob: <dateTime()>
+        position: 'Лікар гінеколог'
+        avatar: <getMedia("avatars/Лихолай Роман Станіславович.jpg", "employee")>
+        category: '@category10'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee29:
+        firstName: Вадим
+        middleName: Петрович
+        lastName: Луценко
+        dob: <dateTime()>
+        position: 'Лікар уролог'
+        avatar: <getMedia("avatars/Луценко Вадим Петрович.jpg", "employee")>
+        category: '@category11'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee30:
+        firstName: Олена
+        middleName: Миколаївна
+        lastName: Мазепа
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Мазепа Олена Миколаївна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee31:
+        firstName: Леся
+        middleName: Олександрівна
+        lastName: Маслова
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Маслова Леся Олександрівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee32:
+        firstName: Світлана
+        middleName: Миколаївна
+        lastName: Мельник
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Мельник Світлана Миколаївна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee33:
+        firstName: Єдуард
+        middleName: Орестович
+        lastName: Нагайло
+        dob: <dateTime()>
+        position: 'Лікар травматолог'
+        avatar: <getMedia("avatars/Нагайло Єдуард Орестович.jpg", "employee")>
+        category: '@category4'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee34:
+        firstName: Ольга
+        middleName: Володимирівна
+        lastName: Назаренко
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Назаренко Ольга володимирівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee35:
+        firstName: Олег
+        middleName: Миколайович
+        lastName: Орленко
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Орленко Олег Миколайович.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee36:
+        firstName: Микола
+        middleName: Андрійович
+        lastName: Осауленко
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Осауленко Микола Андрійович.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee37:
+        firstName: Людмила
+        middleName: Миколаївна
+        lastName: Паламарчук
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Паламарчук Людмила Миколаївна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee38:
+        firstName: Любов
+        middleName: Григорівна
+        lastName: Панченко
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Панченко Любов Григорівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee39:
+        firstName: Богдана
+        middleName: Вячеславівна
+        lastName: Пермінова
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Пермінова Богдана Вячеславівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee40:
+        firstName: Світлана
+        middleName: Григорівна
+        lastName: Пирожок
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Пирожок Світлана Григорівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee41:
+        firstName: Галина
+        middleName: Володимирівна
+        lastName: Пономаренко
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Пономаренко Галина Володимирівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee42:
+        firstName: Ігор
+        middleName: Броніславович
+        lastName: Поторжанський
+        dob: <dateTime()>
+        position: 'Завідуючий хірургічним відділенням'
+        avatar: <getMedia("avatars/Поторжанський Ігор Броніславович.jpg", "employee")>
+        category: '@category4'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee43:
+        firstName: Олександр
+        middleName: Вікторович
+        lastName: Пронь
+        dob: <dateTime()>
+        position: 'Лікар невропатолог'
+        avatar: <getMedia("avatars/Пронь Олександр Вікторович.jpg", "employee")>
+        category: '@category12'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee44:
+        firstName: Наталія
+        middleName: Павлівна
+        lastName: Романенко
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Романенко Наталія Павлівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee45:
+        firstName: Олександр
+        middleName: Петрович
+        lastName: Румянцев
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Румянцев Олександр Петрович.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee46:
+        firstName: Тетяна
+        middleName: Іванівна
+        lastName: Рюшина
+        dob: <dateTime()>
+        position: 'Завідуючий відділенням ЗПСМ №2'
+        avatar: <getMedia("avatars/Рюшина Тетяна Іванівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee47:
+        firstName: Олена
+        middleName: Василівна
+        lastName: Сичевська
+        dob: <dateTime()>
+        position: 'Лікар кардіолог'
+        avatar: <getMedia("avatars/Сичевська Олена Василівна.jpg", "employee")>
+        category: '@category11'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee48:
+        firstName: Марина
+        middleName: Миколаївна
+        lastName: Сокиринська
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Сокиринська Марина Миколаївна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee49:
+        firstName: Ольга
+        middleName: Вікторівна
+        lastName: Сокур
+        dob: <dateTime()>
+        position: 'Лікар отоларинголог'
+        avatar: <getMedia("avatars/Сокур Ольга Вікторівна.jpg", "employee")>
+        category: '@category11'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee50:
+        firstName: Ольга
+        middleName: Василівна
+        lastName: Сологуб
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Сологуб Ольга Василівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee51:
+        firstName: Ніколай
+        middleName: Володимирович
+        lastName: Тарасов
+        dob: <dateTime()>
+        position: 'Головний лікар'
+        avatar: <getMedia("avatars/Тарасов Ніколай Володимирович.jpg", "employee")>
+        category: '@category1'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee52:
+        firstName: Людмила
+        middleName: Миколаївна
+        lastName: Тарасова
+        dob: <dateTime()>
+        position: 'Лікар дерматолог'
+        avatar: <getMedia("avatars/Тарасова Людмила Миколаївна.jpg", "employee")>
+        category: '@category10'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee53:
+        firstName: Сергій
+        middleName: Олександрович
+        lastName: Тесленко
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Тесленко Сергій Олександрович.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee54:
+        firstName: Валерій
+        middleName: Іванович
+        lastName: Тригубчук
+        dob: <dateTime()>
+        position: 'Лікар хірург'
+        avatar: <getMedia("avatars/Тригубчук Валерій Іванович.jpg", "employee")>
+        category: '@category4'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee55:
+        firstName: Олена
+        middleName: Миколаївна
+        lastName: Хлопенко
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Хлопенко Олена Миколаївна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee56:
+        firstName: Наталія
+        middleName: Степанівна
+        lastName: Хоменко
+        dob: <dateTime()>
+        position: 'Лікар терапевт'
+        avatar: <getMedia("avatars/Хоменко Наталія Степанівна.jpg", "employee")>
+        category: '@category1'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee57:
+        firstName: Ольга
+        middleName: Степанівна
+        lastName: Хоменко
+        dob: <dateTime()>
+        position: 'Старша санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Хоменко Ольга Степанівна.jpg", "employee")>
+        category: '@category1'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee58:
+        firstName: Наталія
+        middleName: Анатоліївна
+        lastName: Хріпкова
+        dob: <dateTime()>
+        position: 'Лікар терапевт'
+        avatar: <getMedia("avatars/Хріпкова НаталіяАнатоліївна.jpg", "employee")>
+        category: '@category1'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee59:
+        firstName: Тетяна
+        middleName: Анатоліївна
+        lastName: Чаур
+        dob: <dateTime()>
+        position: 'Лікар ЗПСМ'
+        avatar: <getMedia("avatars/Чаур Тетяна Анатоліївна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee60:
+        firstName: Іван
+        middleName: Іванович
+        lastName: Чечіль
+        dob: <dateTime()>
+        position: 'Завідуючий відділенням денного стаціонару'
+        avatar: <getMedia("avatars/Чечіль Іван Іванович.jpg", "employee")>
+        category: '@category7'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee61:
+        firstName: Олександра
+        middleName: Володимирівна
+        lastName: Чечіль
+        dob: <dateTime()>
+        position: 'Завідуючий відділенням ФТВ'
+        avatar: <getMedia("avatars/Чечіль Олександра Володимирівна.jpg", "employee")>
+        category: '@category8'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee62:
+        firstName: Наталія
+        middleName: Олександрівна
+        lastName: Шевченко
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Шевченко Наталія Олександрівна.jpg", "employee")>
+        category: '@category2'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee63:
+        firstName: Олег
+        middleName: Володимирович
+        lastName: Шевченко
+        dob: <dateTime()>
+        position: 'Лікар хірург'
+        avatar: <getMedia("avatars/Шевченко Олег Володимирович.jpg", "employee")>
+        category: '@category4'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee64:
+        firstName: Тетяна
+        middleName: Василівна
+        lastName: Шевчук
+        dob: <dateTime()>
+        position: 'Головна санітарна медсестра'
+        avatar: <getMedia("avatars/Шевчук Тетяна Василівна.jpg", "employee")>
+        category: '@category1'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee65:
+        firstName: Людмила
+        middleName: Іванівна
+        lastName: Юдіна
+        dob: <dateTime()>
+        position: 'Заступник головного лікаря з ЕТН'
+        avatar: <getMedia("avatars/Юдіна Людмила Іванівна.jpg", "employee")>
+        category: '@category1'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
+    employee66:
+        firstName: Наталія
+        middleName: Григорівна
+        lastName: Яременко
+        dob: <dateTime()>
+        position: 'Санітарна медсестра відділення ЗПСМ'
+        avatar: <getMedia("avatars/Яременко Наталія Григорівна.jpg", "employee")>
+        category: '@category3'
+        createdAt: <dateTimeBetween("-200 days", "now")>
+        updatedAt: <dateTimeBetween($createdAt, "now")>
