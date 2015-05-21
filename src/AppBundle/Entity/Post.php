@@ -6,15 +6,11 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Translatable\Translatable;
-use JMS\Serializer\Annotation\ExclusionPolicy;
-use JMS\Serializer\Annotation\Expose;
-use JMS\Serializer\Annotation\Type;
 
 /**
  * @ORM\Table(name="posts")
  * @ORM\Entity
  * @Gedmo\SoftDeleteable(fieldName="deletedAt", timeAware=false)
- * @ExclusionPolicy("all")
  */
 class Post
 {
@@ -32,8 +28,6 @@ class Post
      * @Gedmo\Translatable
      * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
-     * @Type("string")
-     * @Expose
      */
     private $title;
 
@@ -41,8 +35,6 @@ class Post
      * @var string
      * @Gedmo\Translatable
      * @ORM\Column(type="text", length=255, nullable=true)
-     * @Type("string")
-     * @Expose
      */
     private $shortDescription;
 
@@ -50,8 +42,6 @@ class Post
      * @var string
      * @Gedmo\Translatable
      * @ORM\Column(type="text", nullable=true)
-     * @Type("string")
-     * @Expose
      */
     private $text;
 
@@ -73,8 +63,6 @@ class Post
     /**
      * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(name="slug", type="string", length=255)
-     * @Type("string")
-     * @Expose
      */
     private $slug;
 

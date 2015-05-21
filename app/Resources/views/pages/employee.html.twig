@@ -1,9 +1,17 @@
 <!-- Employee card -->
-{% if employee.avatar %}
-{#    {% path employee.avatar, 'preview' %} #}
-    {% media employee.avatar, 'preview' %}
-{% endif %}
-<p>{{ employee.firstname }} {{ employee.middlename }} {{ employee.lastname }}</p>
-<p>День рождения {{ employee.getdobstring }}</p>
-<p>{{ employee.position }}</p>
+<div class="clearfix">
+    <div class="col-md-2 col-md-offset-0">
+
+        {% if employee.avatar %}
+        {#    {% path employee.avatar, 'preview' %} #}
+            {% media employee.avatar, 'small' with {'class': 'img-circle'} %}
+        {% endif %}
+    </div>
+    <div class="col-md-9 col-md-offset-1">
+        <br/><br/>
+        <b>{{ employee.firstname }} {{ employee.middlename }} {{ employee.lastname }}</b> <br/>
+        {#День рождения {{ employee.getdobstring }}<br/>#}
+        <i>{{ employee.position }}</i><br/>
+    </div>
+</div>
 <!-- /Employee card -->

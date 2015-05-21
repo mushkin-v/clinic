@@ -32,7 +32,7 @@ sonata_media:
 
             formats:
                 preview:   { width: 100, quality: 100}
-#                small:     { width: 200, quality: 100}
+                small:     { width: 150, quality: 100}
                 big:     { width: 500, quality: 100}
     cdn:
         server:

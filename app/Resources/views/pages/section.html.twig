@@ -5,12 +5,12 @@
 <!-- BODY -->
 <section id="Body">
     <div class="row clearfix body-text">
-        <h3 class="body-title">Робітники поліклініки</h3>
-        <ol>
-        {% for employee in employees %}
-            <li>{{ include(':pages:employee.html.twig', { 'employee': employee }) }}</li>
-        {% endfor %}
-        </ol>
+        <h3 class="body-title">{{ section[0].title }}</h3>
+        <div class="body-main-text">
+            {% for employee in employees %}
+                {{ include(':pages:employee.html.twig', { 'employee': employee }) }}<br/>
+            {% endfor %}
+        </div>
     </div>
 </section>
 <!-- /BODY -->

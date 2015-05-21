@@ -7,13 +7,11 @@
     <div class="row clearfix body-text">
         <h3 class="body-title">Відділеня поліклініки</h3>
         <div class="body-main-text">
-            <ol>
             {% for section in sections %}
-                <li class="body-section">
+                <div class="body-section img-rounded">
                     <a href="{{ path('section', {'slug':section.slug}) }}">{{ section.title }}</a>
-                </li>
+                </div>
             {% endfor %}
-            </ol>
         </div>
     </div>
 </section>

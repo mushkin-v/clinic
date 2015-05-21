@@ -40,7 +40,8 @@ class CategoryAdmin extends Admin
     {
         $formMapper
             ->add('title')
-            ->add('description')
+            ->add('description', 'textarea', array('attr' => array('class' => 'wysihtml5', 'style' => 'height:500px')))
+
         ;
     }
 
@@ -53,7 +54,7 @@ class CategoryAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('title')
-            ->add('description')
+//            ->add('description')
             ->add('employees');
     }
 
@@ -66,7 +67,7 @@ class CategoryAdmin extends Admin
     {
         $datagridMapper
             ->add('title')
-            ->add('description')
+//            ->add('description')
             ->add('employees');
     }
 }

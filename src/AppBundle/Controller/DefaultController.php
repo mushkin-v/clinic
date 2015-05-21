@@ -69,7 +69,7 @@ class DefaultController extends Controller
 
             $employees = $this->getDoctrine()->getManager()->getRepository('AppBundle:Employee')->findByCategory($section);
 
-            return $this->render(':pages:section.html.twig', array('employees' => $employees));
+            return $this->render(':pages:section.html.twig', array('employees' => $employees, 'section' => $section));
         } else {
             return $this->render(':pages:main.html.twig');
         }
