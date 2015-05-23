@@ -1,0 +1,20 @@
+{% extends ":default:index.html.twig" %}
+
+{% block page %}
+
+<!-- BODY -->
+<section id="Body">
+    <div class="row clearfix body-text">
+        <h3 class="body-title">Публікації поліклініки</h3>
+        <div class="body-main-text">
+            <h3 class="body-title-employees">{{ publication[0].title }}</h3>
+            {% if publication[0].mainPicture %}
+                {% media publication[0].mainPicture, 'small' with {'class': 'body-img-publ-l'} %}
+            {% endif %}
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ publication[0].text|raw}}</p>
+        </div>
+    </div>
+</section>
+<!-- /BODY -->
+
+{% endblock %}

@@ -80,7 +80,23 @@ class DefaultController extends Controller
      */
     public function publicationsAction()
     {
-        return $this->render(':pages:publications.html.twig');
+        $publications = $this->getDoctrine()->getManager()->getRepository('AppBundle:Post')->findAll();
+
+        return $this->render(':pages:publications.html.twig', array('publications' => $publications));
+    }
+
+    /**
+     * @Route("/publication/{slug}", name="publication")
+     */
+    public function publicationAction($slug)
+    {
+        if ($slug) {
+            $publication = $this->getDoctrine()->getManager()->getRepository('AppBundle:Post')->findBySlug($slug);
+
+            return $this->render(':pages:publication.html.twig', array('publication' => $publication));
+        } else {
+            return $this->render(':pages:main.html.twig');
+        }
     }
 
     /**
@@ -106,4 +122,14 @@ class DefaultController extends Controller
     {
         return $this->render(':pages:contacts.html.twig');
     }
+
+    /**
+     * @Route("/services", name="services")
+     */
+    public function servicesAction()
+    {
+        return $this->render(':pages:services.html.twig');
+    }
+
+
 }
