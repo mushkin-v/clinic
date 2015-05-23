@@ -13,7 +13,7 @@ class TagAdmin extends Admin
     protected $baseRoutePattern = ' Tag ';
     protected $datagridValues = [
                 '_sort_order' => 'ASC',
-                '_sort_by' => 'name',
+                '_sort_by' => 'title',
             ];
 
     /**

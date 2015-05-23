@@ -15,7 +15,7 @@ class EmployeeAdmin extends Admin
     protected $baseRoutePattern = 'Employee';
     protected $datagridValues = [
         '_sort_order' => 'ASC',
-        '_sort_by'    => 'name',
+        '_sort_by'    => 'lastName',
     ];
 
     /**
@@ -84,8 +84,8 @@ class EmployeeAdmin extends Admin
                 ],
             ])
             ->addIdentifier('firstName')
-            ->add('middleName')
-            ->add('lastName')
+            ->addIdentifier('middleName')
+            ->addIdentifier('lastName')
             ->add('dob', 'date')
             ->add('position')
             ->add('category')

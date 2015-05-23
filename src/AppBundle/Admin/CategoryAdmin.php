@@ -15,7 +15,7 @@ class CategoryAdmin extends Admin
     protected $baseRoutePattern = 'Category';
     protected $datagridValues = [
         '_sort_order' => 'ASC',
-        '_sort_by'    => 'name',
+        '_sort_by'    => 'title',
     ];
 
     /**
@@ -56,7 +56,7 @@ class CategoryAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('title')
-            ->add('shortDescription')
+            ->addIdentifier('shortDescription')
             ->add('employees');
     }
 
