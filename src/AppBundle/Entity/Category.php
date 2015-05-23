@@ -36,6 +36,14 @@ class Category
      * @Assert\NotBlank()
      * @ORM\Column(type="text", nullable=true)
      */
+    private $shortDescription;
+
+    /**
+     * @var string
+     * @Gedmo\Translatable
+     * @Assert\NotBlank()
+     * @ORM\Column(type="text", nullable=true)
+     */
     private $description;
 
     /**
@@ -119,6 +127,29 @@ class Category
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set shortDescription
+     *
+     * @param  string   $shortDescription
+     * @return Category
+     */
+    public function setShortDescription($shortDescription)
+    {
+        $this->shortDescription = $shortDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get shortDescription
+     *
+     * @return string
+     */
+    public function getShortDescription()
+    {
+        return $this->shortDescription;
     }
 
     /**

@@ -7,6 +7,10 @@
     <div class="row clearfix body-text">
         <h3 class="body-title">{{ section[0].title }}</h3>
         <div class="body-main-text">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ section[0].description }}</p>
+        </div>
+        <div class="body-main-text">
+            <b class="body-title-employees">Працівники відділення:</b><br/><br/><br/>
             {% for employee in employees %}
                 {{ include(':pages:employee.html.twig', { 'employee': employee }) }}<br/>
             {% endfor %}

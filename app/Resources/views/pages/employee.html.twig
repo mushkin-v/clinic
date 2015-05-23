@@ -9,9 +9,9 @@
     </div>
     <div class="col-md-9 col-md-offset-1">
         <br/><br/>
-        <b>{{ employee.firstname }} {{ employee.middlename }} {{ employee.lastname }}</b> <br/>
+        <div class="body-employees">{{ employee.firstname }} {{ employee.middlename }} {{ employee.lastname }}</div>
         {#День рождения {{ employee.getdobstring }}<br/>#}
-        <i>{{ employee.position }}</i><br/>
+        <b class="body-title-employees">{{ employee.position }}</b><br/>
     </div>
 </div>
 <!-- /Employee card -->

@@ -38,10 +38,6 @@
     text-transform: uppercase;
 }
 
-.left-menu ul li {
-    display: block;
-}
-
 .left-menu ul li i{
     margin-right: 5px;
 }

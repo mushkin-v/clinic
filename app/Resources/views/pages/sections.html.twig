@@ -8,9 +8,11 @@
         <h3 class="body-title">Відділеня поліклініки</h3>
         <div class="body-main-text">
             {% for section in sections %}
-                <div class="body-section img-rounded">
-                    <a href="{{ path('section', {'slug':section.slug}) }}">{{ section.title }}</a>
-                </div>
+                <nav>
+                <ul class="body-section img-rounded">
+                    <li><a href="{{ path('section', {'slug':section.slug}) }}"><b>{{ section.title }}</b><br/><small><i>{{ section.shortDescription }}...</i></small></a></li>
+                </ul>
+                </nav>
             {% endfor %}
         </div>
     </div>
