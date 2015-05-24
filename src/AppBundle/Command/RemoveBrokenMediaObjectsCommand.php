@@ -35,7 +35,7 @@ class RemoveBrokenMediaObjectsCommand extends ContainerAwareCommand
         }, $associatedMediaObjects);
 
         foreach ($mediaManager->findAll() as $media) {
-            if (false == in_array($media->getId(), $associatedMediaObjectsIds)) {
+            if (false === in_array($media->getId(), $associatedMediaObjectsIds)) {
                 $output->writeln(sprintf('Removed media with id "%s"', $media->getId()));
                 $mediaManager->delete($media);
             }

@@ -83,7 +83,8 @@ class LoadCsvFixturesCommand extends ContainerAwareCommand
             $yamlArray = [];
             $number = count($allData[0]);
 
-            for ($i = 2; $i < (count($allData)); $i++) {
+            $countAllData = count($allData);
+            for ($i = 2; $i < $countAllData; $i++) {
                 for ($c = 0; $c < $number; $c++) {
                     $yamlArray[$entityPath][$entityName.($i - 1)][$allData[1][$c]] = $allData[$i][$c];
                 }
