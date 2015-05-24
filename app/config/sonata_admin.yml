@@ -2,7 +2,6 @@ sonata_admin:
     title:      %sonata_admin.title%
     title_logo: %sonata_admin.logo_title%
     templates:
-#      layout:  :SonataAdmin:base_layout.html.twig
       layout: ::SonataAdmin/standard_layout.html.twig
       edit: ::SonataAdmin/CRUD/edit.html.twig
 
@@ -11,9 +10,9 @@ sonata_admin:
             Clinic:
                 label: Головна панель
                 label_catalogue: AppBundle
-            sonata_media:
-                label: Медіа панель
-                label_catalogue: AppBundle
+#            sonata_media:
+#                label: Медіа панель
+#                label_catalogue: AppBundle
 #            Hidden:
 
         blocks:
@@ -22,7 +21,7 @@ sonata_admin:
                 class: col-md-10
                 type: sonata.admin.block.admin_list
                 settings:
-                    groups: [Clinic, sonata_media]
+                    groups: [Clinic] #[sonata_media]
             -
                 position: right
                 class: col-md-6

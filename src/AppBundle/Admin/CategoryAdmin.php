@@ -56,7 +56,7 @@ class CategoryAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('title')
-            ->addIdentifier('shortDescription')
+//            ->addIdentifier('shortDescription')
             ->add('employees');
     }
 

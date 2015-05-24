@@ -15,14 +15,15 @@
     padding-left: 15%;
     color: #f5f5f5;
     text-align: center;
-    font-family: RobotoBold, serif;
+    font-family: "RobotoBold", sans-serif;
+    font-size: 140%;
 
 }#HeaderTop h3 {
      margin: 0;
      padding-left: 15%;
      color: #f5f5f5;
      text-align: center;
-     font-family: RobotoLight, serif;
+     font-family: "RobotoLight", sans-serif;
  }
 
 .h-text{
