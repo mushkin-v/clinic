@@ -108,11 +108,35 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/appointment", name="appointment")
+     * @Route("/appointment_1", name="appointment_1")
      */
-    public function appointmentAction()
+    public function appointment1Action()
     {
-        return $this->render(':pages:appointment.html.twig');
+        return $this->render(':pages:appointment_1.html.twig');
+    }
+
+    /**
+     * @Route("/appointment_2", name="appointment_2")
+     */
+    public function appointment2Action()
+    {
+        return $this->render(':pages:appointment_2.html.twig');
+    }
+
+    /**
+     * @Route("/appointment_3", name="appointment_3")
+     */
+    public function appointment3Action()
+    {
+        return $this->render(':pages:appointment_3.html.twig');
+    }
+
+    /**
+     * @Route("/appointment_4", name="appointment_4")
+     */
+    public function appointment4Action()
+    {
+        return $this->render(':pages:appointment_4.html.twig');
     }
 
     /**

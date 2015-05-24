@@ -1,0 +1,20 @@
+{% extends ":default:index.html.twig" %}
+
+{% block page %}
+
+<!-- BODY -->
+<section id="Body">
+    <div class="row clearfix body-text">
+        <h3 class="body-title">Графіки прийому поліклініки</h3>
+        <ul class="body-main-text">
+            <li class="body-section img-rounded"><a href="{{ path('appointment_1') }}">Графік роботи на І півріччя 2015р. відділення ЗПСМ №1</a><br/></li>
+            <li class="body-section img-rounded"><a href="{{ path('appointment_2') }}">Графік роботи на І півріччя 2015р. відділення ЗПСМ №2</a><br/></li>
+            <li class="body-section img-rounded"><a href="{{ path('appointment_3') }}">Графік прийому спеціалістів на 2015р.</a><br/></li>
+            <li class="body-section img-rounded"><a href="{{ path('appointment_4') }}">Графік прийому громадян адміністрацією </a><br/></li>
+        </ul>
+        <iframe class="body-appointment" src="https://docs.google.com/document/d/1dYlCrCk1PT_OldQPXrpyBfhKzTjv2zYH9yggROkmZE8/pub?embedded=true"></iframe>
+    </div>
+</section>
+<!-- /BODY -->
+
+{% endblock %}
