@@ -8,9 +8,9 @@
         <h3 class="body-title">Публікації поліклініки</h3>
         <div class="body-main-text">
             <h3 class="body-title-employees">{{ publication[0].title }}</h3>
-            {% if publication[0].mainPicture %}
-                {% media publication[0].mainPicture, 'small' with {'class': 'body-img-publ-l'} %}
-            {% endif %}
+            {#{% if publication[0].mainPicture %}#}
+                {#{% media publication[0].mainPicture, 'small' with {'class': 'body-img-publ-l'} %}#}
+            {#{% endif %}#}
             {{ publication[0].text|raw}}
         </div>
     </div>

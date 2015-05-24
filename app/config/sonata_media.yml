@@ -22,9 +22,18 @@ sonata_media:
                 - sonata.media.provider.image
 
             formats:
-                preview:   { width: 100, quality: 100}
-                small:     { width: 150, quality: 150}
-                big:     { width: 500, quality: 100}
+                preview:   { width: 100, quality: 70}
+                small:     { width: 50, quality: 70}
+                big:     { width: 500, quality: 70}
+
+        category:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                preview:   { width: 100, quality: 70}
+                small:     { width: 50, quality: 70}
+                big:     { width: 500, quality: 70}
 
         employee: #avatar size is 500x500 px
             providers:

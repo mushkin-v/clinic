@@ -42,15 +42,15 @@ class PostAdmin extends Admin
                     ->add('title')
                     ->add('shortDescription')
                     ->add('text', 'textarea', array('attr' => array('class' => 'wysihtml5', 'style' => 'height:500px')))
-//                    ->add('mainPicture', 'sonata_type_model_list', [
-//                            'required' => false,
-//                            'btn_list' => false,
-//                        ], [
-//                            'link_parameters' => [
-//                                    'context' => 'post',
-//                                    'provider' => 'sonata.media.provider.image',
-//                                ],
-//                        ])
+                    ->add('mainPicture', 'sonata_type_model_list', [
+                            'required' => false,
+                            'btn_list' => false,
+                        ], [
+                            'link_parameters' => [
+                                    'context' => 'post',
+                                    'provider' => 'sonata.media.provider.image',
+                                ],
+                        ])
 //                    ->add('tags', 'sonata_type_model',
 //                            array(
 //                                    'by_reference' => true,
@@ -68,15 +68,15 @@ class PostAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-//                    ->add('mainPicture', 'sonata_type_model_list', [
-//                        'required' => false,
-//                        'btn_list' => false,
-//                    ], [
-//                        'link_parameters' => [
-//                            'context' => 'post',
-//                            'provider' => 'sonata.media.provider.image',
-//                        ],
-//                    ])
+                    ->add('mainPicture', 'sonata_type_model_list', [
+                        'required' => false,
+                        'btn_list' => false,
+                    ], [
+                        'link_parameters' => [
+                            'context' => 'post',
+                            'provider' => 'sonata.media.provider.image',
+                        ],
+                    ])
                     ->addIdentifier('title')
                     ->addIdentifier('shortDescription');
     }

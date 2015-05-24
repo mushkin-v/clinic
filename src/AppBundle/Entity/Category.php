@@ -47,6 +47,14 @@ class Category
     private $description;
 
     /**
+     * @var
+     *
+     * @ORM\OneToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Media", cascade={"persist"})
+     * @ORM\JoinColumn(name="mainPicture_id", referencedColumnName="id")
+     */
+    private $mainPicture;
+
+    /**
      * @Gedmo\Locale
      * Used locale to override Translation listener`s locale
      * this is not a mapped field of entity metadata, just a simple property
@@ -94,6 +102,29 @@ class Category
     public function __construct()
     {
         $this->employees = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Get mainPicture
+     *
+     * @return \Application\Sonata\MediaBundle\Entity\Media
+     */
+    public function getMainPicture()
+    {
+        return $this->mainPicture;
+    }
+
+    /**
+     * Set mainPicture
+     *
+     * @param  \Application\Sonata\MediaBundle\Entity\Media $mainPicture
+     * @return Category
+     */
+    public function setMainPicture(\Application\Sonata\MediaBundle\Entity\Media $mainPicture = null)
+    {
+        $this->mainPicture = $mainPicture;
+
+        return $this;
     }
 
     /**

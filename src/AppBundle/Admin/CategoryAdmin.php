@@ -43,7 +43,15 @@ class CategoryAdmin extends Admin
             ->add('title')
             ->add('shortDescription', 'textarea', array('attr' => array('class' => 'wysihtml5', 'style' => 'height:200px')))
             ->add('description', 'textarea', array('attr' => array('class' => 'wysihtml5', 'style' => 'height:500px')))
-
+            ->add('mainPicture', 'sonata_type_model_list', [
+                'required' => false,
+                'btn_list' => false,
+            ], [
+                'link_parameters' => [
+                    'context' => 'category',
+                    'provider' => 'sonata.media.provider.image',
+                ],
+            ])
         ;
     }
 
@@ -55,6 +63,15 @@ class CategoryAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
+            ->add('mainPicture', 'sonata_type_model_list', [
+                'required' => false,
+                'btn_list' => false,
+            ], [
+                'link_parameters' => [
+                    'context' => 'category',
+                    'provider' => 'sonata.media.provider.image',
+                ],
+            ])
             ->addIdentifier('title')
 //            ->addIdentifier('shortDescription')
             ->add('employees');

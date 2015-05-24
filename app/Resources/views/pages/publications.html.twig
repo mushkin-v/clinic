@@ -10,7 +10,12 @@
             {% for publication in publications %}
                 <nav>
                     <ul class="body-section img-rounded">
-                        <li><a href="{{ path('publication', {'slug':publication.slug}) }}"><b>{{ publication.title }}</b><br/><small><i>{{ publication.shortDescription }}...</i></small></a></li>
+                        <li>
+                            {% if publication.mainPicture %}
+                                {% media publication.mainPicture, 'small' with {'class': 'body-img-publ-l img-rounded'} %}
+                            {% endif %}
+                            <a href="{{ path('publication', {'slug':publication.slug}) }}"><b>{{ publication.title }}</b><br/><small><i>{{ publication.shortDescription }}...</i></small></a>
+                        </li>
                     </ul>
                 </nav>
             {% endfor %}
