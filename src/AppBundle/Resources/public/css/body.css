@@ -70,6 +70,10 @@ text-align: center;
     color: #00244c;
 }
 
+.body-section a{
+    color: #00244c;
+}
+
 .body-section:hover{
     background-color: #6dcbca;
     color: #f5f5f5;
