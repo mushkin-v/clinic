@@ -1,12 +1,12 @@
 /web/bundles/
 !web/uploads
 !web/uploads/.gitkeep
-/web/uploads/*
-!web/uploads/media
 !web/uploads/media/.gitkeep
-/web/uploads/media/*
+/web/uploads/*
+!app/cache
 /app/cache/*
 !app/cache/.gitkeep
+!app/logs
 /app/logs/*
 !app/logs/.gitkeep
 /app/bootstrap.php.cache
