@@ -11,7 +11,7 @@
             {% if publication[0].mainPicture %}
                 {% media publication[0].mainPicture, 'small' with {'class': 'body-img-publ-l'} %}
             {% endif %}
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ publication[0].text|raw}}</p>
+            {{ publication[0].text|raw}}
         </div>
     </div>
 </section>

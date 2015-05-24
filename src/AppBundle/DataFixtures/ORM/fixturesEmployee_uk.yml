@@ -44,9 +44,9 @@ AppBundle\Entity\Employee:
         middleName: Валентинівна
         lastName: Бровченко
         dob: <dateTime()>
-        position: Лікар
+        position: Лікар невропатолог
         avatar: <getMedia("avatars/Бровченко Ольга Валентинівна.jpg", "employee")>
-        category: '@category1'
+        category: '@category12'
         createdAt: <dateTimeBetween("-200 days", "now")>
         updatedAt: <dateTimeBetween($createdAt, "now")>
     employee6:
@@ -426,7 +426,7 @@ AppBundle\Entity\Employee:
         dob: <dateTime()>
         position: 'Лікар невропатолог'
         avatar: <getMedia("avatars/Пронь Олександр Вікторович.jpg", "employee")>
-        category: '@category12'
+        category: '@category7'
         createdAt: <dateTimeBetween("-200 days", "now")>
         updatedAt: <dateTimeBetween($createdAt, "now")>
     employee44:
@@ -556,7 +556,7 @@ AppBundle\Entity\Employee:
         dob: <dateTime()>
         position: 'Лікар терапевт'
         avatar: <getMedia("avatars/Хоменко Наталія Степанівна.jpg", "employee")>
-        category: '@category1'
+        category: '@category7'
         createdAt: <dateTimeBetween("-200 days", "now")>
         updatedAt: <dateTimeBetween($createdAt, "now")>
     employee57:
@@ -566,7 +566,7 @@ AppBundle\Entity\Employee:
         dob: <dateTime()>
         position: 'Старша санітарна медсестра відділення ЗПСМ'
         avatar: <getMedia("avatars/Хоменко Ольга Степанівна.jpg", "employee")>
-        category: '@category1'
+        category: '@category2'
         createdAt: <dateTimeBetween("-200 days", "now")>
         updatedAt: <dateTimeBetween($createdAt, "now")>
     employee58:
@@ -576,7 +576,7 @@ AppBundle\Entity\Employee:
         dob: <dateTime()>
         position: 'Лікар терапевт'
         avatar: <getMedia("avatars/Хріпкова НаталіяАнатоліївна.jpg", "employee")>
-        category: '@category1'
+        category: '@category2'
         createdAt: <dateTimeBetween("-200 days", "now")>
         updatedAt: <dateTimeBetween($createdAt, "now")>
     employee59:
