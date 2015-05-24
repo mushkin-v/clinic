@@ -34,7 +34,7 @@ class Category
      * @var string
      * @Gedmo\Translatable
      * @Assert\NotBlank()
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="text", length=300, nullable=true)
      */
     private $shortDescription;
 

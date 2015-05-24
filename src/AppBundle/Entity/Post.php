@@ -34,7 +34,7 @@ class Post
     /**
      * @var string
      * @Gedmo\Translatable
-     * @ORM\Column(type="text", length=255, nullable=true)
+     * @ORM\Column(type="text", length=300, nullable=true)
      */
     private $shortDescription;
 
