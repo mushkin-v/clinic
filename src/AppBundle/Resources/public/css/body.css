@@ -29,6 +29,22 @@
     margin-bottom: 10px;
 }
 
+.bunner{
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+}
+
+.body-main-text-with-bunner{
+    font-family: "RobotoCondensedLight", sans-serif;
+    font-size: medium;
+    border: solid 1px #79b7e7;
+    padding: 1%;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 210px;
+}
+
 .body-main-text{
     font-family: "RobotoCondensedLight", sans-serif;
     font-size: medium;
@@ -145,6 +161,15 @@ text-align: center;
     border: solid 1px #79b7e7;
     padding: 1%;
     margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.body-app-text{
+    font-family: "RobotoCondensedLight", sans-serif;
+    font-size: small;
+    text-align: center;
+    /*border: solid 1px #79b7e7;*/
     margin-left: 10%;
     margin-right: 10%;
 }
