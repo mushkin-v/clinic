@@ -9,10 +9,10 @@
         <div class="body-main-text">
             {% for section in sections %}
                 <nav>
-                <ul class="body-section img-rounded">
+                <ul class="body-section">
                     <li>
                         {% if section.mainPicture %}
-                            {% media section.mainPicture, 'small' with {'class': 'body-img-publ-l img-rounded'} %}
+                            {% media section.mainPicture, 'small' with {'class': 'body-img-publ-l'} %}
                         {% endif %}
                         <a href="{{ path('section', {'slug':section.slug}) }}"><b>{{ section.title }}</b><br/><small><i>{{ section.shortDescription }}...</i></small></a>
                     </li>
