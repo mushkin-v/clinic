@@ -155,5 +155,11 @@ class DefaultController extends Controller
         return $this->render(':pages:services.html.twig');
     }
 
-
+    /**
+     * @Route("/budget", name="budget")
+     */
+    public function budgetAction()
+    {
+        return $this->render(':pages:budget.html.twig');
+    }
 }
