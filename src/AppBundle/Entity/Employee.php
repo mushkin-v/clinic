@@ -46,6 +46,13 @@ class Employee
     private $lastName;
 
     /**
+     * @var string
+     * @Gedmo\Translatable
+     * @ORM\Column(type="string")
+     */
+    private $bio;
+
+    /**
      * @var /Datetime
      * @Assert\NotBlank()
      * @ORM\Column(type="datetime")
@@ -169,6 +176,29 @@ class Employee
     public function getLastName()
     {
         return $this->lastName;
+    }
+
+    /**
+     * Set Bio
+     *
+     * @param  string   $bio
+     * @return Employee
+     */
+    public function setBio($bio)
+    {
+        $this->bio = $bio;
+
+        return $this;
+    }
+
+    /**
+     * Get bio
+     *
+     * @return string
+     */
+    public function getBio()
+    {
+        return $this->bio;
     }
 
     /**

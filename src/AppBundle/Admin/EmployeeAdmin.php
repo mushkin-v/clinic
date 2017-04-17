@@ -47,6 +47,7 @@ class EmployeeAdmin extends Admin
             ->add('firstName')
             ->add('middleName')
             ->add('lastName')
+            ->add('bio', 'textarea', array('attr' => array('style' => 'height:200px')))
             ->add('avatar', 'sonata_type_model_list', [
                 'required' => false,
                 'btn_list' => false,
