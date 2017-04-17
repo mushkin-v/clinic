@@ -1,0 +1,29 @@
+{% extends ":default:index.html.twig" %}
+
+{% block page %}
+
+<!-- BODY -->
+<section id="Body">
+    <div class="row clearfix body-text">
+        <h3 class="body-title">Інтернет-приймальня</h3>
+        <div class="body-contacts-text col-lg-10 col-lg-offset-0 body-text">
+            <br/>
+            <form id="contact_form" action="{{ path('contact-form') }}" method="POST" enctype="multipart/form-data" onSubmit="alert('Дякуємо за Ваше повідомлення!');">
+                <label for="name">Вкажіть Ваше ПІБ:</label><br />
+                <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+
+                <label for="email">Вкажіть Ваш email:</label><br />
+                <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+
+                <label for="message">Додайте Ваше Повідомлення:</label><br />
+                <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+
+                <input id="submit_button" type="submit" value="Відправити" />
+            </form>
+            <br/>
+        </div>
+    </div>
+</section>
+<!-- /BODY -->
+
+{% endblock %}

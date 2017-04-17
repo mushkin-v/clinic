@@ -80,7 +80,7 @@ class DefaultController extends Controller
      */
     public function publicationsAction()
     {
-        $publications = $this->getDoctrine()->getManager()->getRepository('AppBundle:Post')->findAll();
+        $publications = $this->getDoctrine()->getManager()->getRepository('AppBundle:Post')->findBy(array(),array('createdAt' => 'DESC'));;
 
         return $this->render(':pages:publications.html.twig', array('publications' => $publications));
     }
@@ -140,6 +140,60 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/contact-form", name="contact-form")
+     */
+    public function contactFormAction()
+    {
+        if(isset($_POST['email'])) {
+            $email_to = "clinica5.ck.ua@gmail.com";
+            $email_subject = "Інтернет-приймальня";
+            function died($error) {
+                echo 'ПОМИЛКА!<br />';
+                echo $error."<br /><br />";
+                die();
+            }
+            if(!isset($_POST['name']) ||
+                !isset($_POST['email']) ||
+                !isset($_POST['message'])) {
+                died('Ваша інфрмація містить помилку!<br />');
+            }
+            $name = $_POST['name']; // required
+            $email_from = $_POST['email']; // required
+            $message = $_POST['message']; // required
+            $error_message = "";
+            $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+            if(!preg_match($email_exp,$email_from)) {
+                $error_message .= 'Ваш email не вірний!<br />';
+            }
+            $string_exp = "/^[A-Za-z .'-]+$/";
+            if(!preg_match($string_exp,$name)) {
+                $error_message .= 'Ваше Ім\'я містить помилку!<br />';
+            }
+            if(strlen($message) < 2) {
+                $error_message .= 'Ваше повідомлення повинно мати більше 2 символів!<br />';
+            }
+            if(strlen($error_message) > 0) {
+                died($error_message);
+            }
+            $email_message = "Повідомлення з Інтернет-приймальні.\n";
+            function clean_string($string) {
+                $bad = array("content-type","bcc:","to:","cc:","href");
+                return str_replace($bad,"",$string);
+            }
+            $email_message .= "Відправник: ".clean_string($name)."\n";
+            $email_message .= "Email: ".clean_string($email_from)."\n";
+            $email_message .= "Повідомлення:\n ".clean_string($message)."\n";
+
+            $headers = 'From: '.$email_from."\r\n".
+                'Reply-To: '.$email_from."\r\n" .
+                'X-Mailer: PHP/' . phpversion();
+            @mail($email_to, $email_subject, $email_message, $headers);
+        }
+
+        return $this->render(':pages:contact-form.html.twig');
+    }
+
+    /**
      * @Route("/contacts", name="contacts")
      */
     public function contactsAction()
@@ -155,5 +209,11 @@ class DefaultController extends Controller
         return $this->render(':pages:services.html.twig');
     }
 
-
+    /**
+     * @Route("/budget", name="budget")
+     */
+    public function budgetAction()
+    {
+        return $this->render(':pages:budget.html.twig');
+    }
 }

@@ -9,12 +9,12 @@
         <div class="body-main-text">
             {% for publication in publications %}
                 <nav>
-                    <ul class="body-section img-rounded">
+                    <ul class="body-section">
                         <li>
                             {% if publication.mainPicture %}
-                                {% media publication.mainPicture, 'small' with {'class': 'body-img-publ-l img-rounded'} %}
+                                {% media publication.mainPicture, 'small' with {'class': 'body-img-publ-l'} %}
                             {% endif %}
-                            <a href="{{ path('publication', {'slug':publication.slug}) }}"><b>{{ publication.title }}</b><br/><small><i>{{ publication.shortDescription }}...</i></small></a>
+                            <a href="{{ path('publication', {'slug':publication.slug}) }}"><b>{{ publication.title }}</b><br/><small>{{ publication.createdAt |date('d-m-Y') }}</small><br/><small><i>{{ publication.shortDescription }}...</i></small></a>
                         </li>
                     </ul>
                 </nav>
