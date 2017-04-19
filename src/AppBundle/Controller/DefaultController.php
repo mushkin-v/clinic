@@ -216,4 +216,12 @@ class DefaultController extends Controller
     {
         return $this->render(':pages:budget.html.twig');
     }
+
+    /**
+     * @Route("/drugs", name="drugs")
+     */
+    public function drugsAction()
+    {
+        return $this->render(':pages:drugs.html.twig');
+    }
 }
